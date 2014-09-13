@@ -1,0 +1,36 @@
+RFIOMECH:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Owner: rfio
+		BuildLimit: 1
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Mechanic
+		Description: Repairs nearby vehicles.\n  Strong vs Nothing\n  Weak vs Everything
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 80
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	AutoHeal:
+	Armament:
+		Weapon: Repair
+	Captures:
+		CaptureTypes: husk
+		Sabotage: false
+	AttackMedic:
+	TakeCover:
+	-AutoTarget:
+	AttackMove:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Image: mech
+

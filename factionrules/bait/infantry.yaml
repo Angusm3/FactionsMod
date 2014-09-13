@@ -1,0 +1,206 @@
+BAITMG:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Minigunner
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: bait
+		BuildLimit: 40
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 50
+	Armament:
+		Weapon: MachineGun
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2,idle3,idle4
+		StandAnimations: stand, stand2
+		Image: e1
+	DetectCloaked:
+		Range: 2
+
+BAITSMAW:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Quad Rocket
+		Description: Anti-tank infantry. \n  Strong vs Tanks \n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: bait
+		BuildLimit: 5
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 45
+	Armament@1:
+		Name: 1
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	Armament@2:
+		Name: 2
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	Armament@3:
+		Name: 3
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	Armament@4:
+		Name: 4
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: smaw
+	DetectCloaked:
+		Range: 2
+
+BAITSNIPER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Scout
+		Description: Elite Scout, \n   Carries Bolt Action Rifle
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: bait
+		BuildLimit: 1
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 99
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 35
+	Armor:
+		Forgotten:
+	Armament@PRIMARY:
+		Weapon: Scout
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: snpr
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 100
+		CloakSound:
+		UncloakSound:
+		UncloakOnMove: yes
+	DetectCloaked:
+		Range: 4
+
+BAITFLAMETHROWER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Flamethrower
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: bait
+		BuildLimit: 2
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Flamer
+		LocalOffset: 341,0,256
+		FireDelay: 3
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+	AttackFrontal:
+	WithMuzzleFlash:
+		SplitFacings: true
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		StandAnimations: stand, stand2
+		Image: e4
+	DetectCloaked:
+		Range: 2
+
+BAITMEDIC:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 50
+		Owner: bait
+		BuildLimit: 1
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Medic
+		Description: Heals nearby infantry.\n  Strong vs Nothing\n  Weak vs Everything
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 80
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	AutoHeal:
+	Armament:
+		Weapon: Heal
+	AttackMedic:
+	TakeCover:
+	-AutoTarget:
+	AttackMove:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Image: medi
+
+BAITMORTAR:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Mortar
+		Description: Long Range artillery infantry. \n  Strong vs Ground \n  Weak vs Air
+	Buildable:
+		BuildPaletteOrder: 60
+		Owner: bait
+		BuildLimit: 3
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 28
+	Health:
+		HP: 150
+	Armament:
+		Weapon: MortarShell
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Image: mrtr
+	RenderRangeCircle:
+	DetectCloaked:
+		Range: 2
+

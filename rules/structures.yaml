@@ -1,0 +1,770 @@
+SLAR:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Solar Array
+		Description: Generates power
+	ProvidesCustomPrerequisite:
+		Prerequisite: anypower
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: forgotten
+		Prerequisites: fact
+	Building:
+		Power: 50
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+
+ASLR:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Solar Array
+		Description: Generates power
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: forgotten
+		Prerequisites: anyhq
+	Building:
+		Power: 100
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+
+RFNRY:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Tiberium Refinery
+		Description: Processes raw Tiberium\ninto useable resources
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: anypower
+		Owner: forgotten
+	Building:
+		Power: -30
+		Footprint: _x_ xxx ===
+		Dimensions: 3,3
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 6c0
+	Bib:
+	TiberiumRefinery:
+		DockOffset: 0,2
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 1500
+	Selectable:
+		Bounds: 73,72
+	CustomSellValue:
+		Value: 300
+	FreeActor:
+		Actor: HARV
+		InitialActivity: FindResources
+		SpawnOffset: 1,2
+		Facing: 64
+	WithResources:
+
+TENT:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Tent Barracks
+		Description: Trains infantry
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: forgotten
+	Building:
+		Power: -5
+		Footprint: __ xx xx
+		Dimensions: 2,3
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 5c0
+	Bib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	Production:
+		Produces: Infantry
+	ProductionQueue:
+		Type: Infantry
+		Group: Infantry
+		BuildSpeed: .4
+		LowPowerSlowdown: 1
+	ProductionBar:
+
+HAND:
+	Inherits: ^Building
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Hand of Nod
+		Description: Trains infantry/nheals nearby allied soldiers
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anypower
+		Owner: nod
+	Building:
+		Power: -20
+		Footprint: __ xx xx
+		Dimensions: 2,3
+	Health:
+		HP: 500
+	Armament:
+		Weapon: Heal
+	RevealsShroud:
+		Range: 5c0
+	Bib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	Production:
+		Produces: Infantry
+	ProductionQueue:
+		Type: Infantry
+		Group: Infantry
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+	ProductionBar:
+	RenderRangeCircle:
+	AttackTurreted:
+	Turreted:
+		ROT: 255
+	AutoHeal:
+
+FSAL:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Forgotten Salvage
+		Description: Assembly point for\nvehicle reinforcements\nrepairs allied vehicles near it
+	ProvidesCustomPrerequisite:
+		Prerequisite: salvage
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: barracks
+		Owner: forgotten
+	Building:
+		Power: -15
+		Footprint: ___ xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 1000
+	Armament:
+		Weapon: Repair
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	-RenderBuilding:
+	RenderBuildingWarFactory:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -341,-341,0
+		ExitCell: 0,2
+	Production:
+		Produces: Vehicle
+	ProductionQueue:
+		Type: Vehicle
+		Group: Vehicle
+		BuildSpeed: .4
+		LowPowerSlowdown: 1
+	ProductionBar:
+	RenderRangeCircle:
+	AttackTurreted:
+	Turreted:
+		ROT: 255
+	AutoHeal:
+	WithMakeAnimation:
+
+MGNST:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Machine Gun Nest
+		Description: Anti-Infantry base defense.\n  Strong vs Infantry\n  Weak vs Tanks
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 10
+		Owner: forgotten
+	Building:
+		Power: -0
+	-GivesBuildableArea:
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 12
+		InitialFacing: 50
+	RenderBuildingTurreted:
+	Armament@1:
+		Weapon: NestMachineGun
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	AutoTarget:
+	-RenderBuilding:
+	-DeadBuildingState:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5
+	WithMakeAnimation:
+
+FHPD:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Slab of Concrete
+		Description: Produces and\nrepairs helicopters
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: barracks
+		Owner: forgotten
+	Building:
+		Power: -10
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Aircraft
+	Reservable:
+	RepairsUnits:
+	RallyPoint:
+	ProductionQueue:
+		Type: Aircraft
+		Group: Aircraft
+		BuildSpeed: .4
+		LowPowerSlowdown: 1
+	ProductionBar:
+	RenderBuilding:
+		Image: HPAD
+	WithMakeAnimation:
+
+OBLI:
+	RequiresPower:
+	Inherits: ^Building
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Obelisk of Light
+		Description: Advanced base defense.\n  Requires power to operate.\n  Strong vs Tanks, Infantry\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 60
+		Prerequisites: tmpl
+		Owner: nod
+	Building:
+		Power: -150
+		Footprint: _ x
+		Dimensions: 1,2
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	RenderBuildingCharge:
+		ChargeAudio: obelpowr.wav
+	Armament@PRIMARY:
+		Weapon: Laser
+		LocalOffset: 0,0,725
+		FireDelay: 8
+	Armament@SECONDARY:
+		Weapon: Laser2
+		LocalOffset: 0,0,725
+		FireDelay: 8
+	AttackTurreted:
+	Turreted:
+		ROT: 255
+	AutoTarget:
+	-RenderBuilding:
+	RenderRangeCircle:
+	-EmitInfantryOnSell:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6
+	DisabledOverlay:
+	WithMakeAnimation:
+
+RDST:
+	RequiresPower:
+	CanPowerDown:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Radio Station
+		Description: Provides an overview of the battlefield.\n  Requires power to operate.
+	ProvidesCustomPrerequisite:
+		Prerequisite: anyhq
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: salvage
+		Owner: forgotten
+	Building:
+		Power: -20
+		Footprint: x_ xx
+		Dimensions: 2,2
+	Health:
+		HP: 750
+	RevealsShroud:
+		Range: 10c0
+	Bib:
+	ProvidesRadar:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 8
+	AirstrikePower:
+		Icon: airstrike
+		ChargeTime: 180
+		SquadSize: 3
+		QuantizedFacings: 8
+		Description: Air Strike
+		LongDesc: Deploy an aerial napalm strike.\nBurns buildings and infantry along a line.
+		EndChargeSound: airredy1.aud
+		SelectTargetSound: select1.aud
+		IncomingSound: enemya.aud
+		UnitType: a10
+	SupportPowerChargeBar:
+	DisabledOverlay:
+
+TSLA:
+	Inherits: ^ForgottenBuilding
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 20
+		Prerequisites: grnh
+		Owner: forgotten, hayl
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Tesla Coil
+		Description: Advanced base defense. Requires power\nto operate.\n  Strong vs Tanks, Infantry\n  Weak vs Aircraft
+	Building:
+		Power: -200
+		Footprint: _ x
+		Dimensions: 1,2
+	-GivesBuildableArea:
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	RenderBuildingCharge:
+		ChargeAudio: tslachg2.aud
+	-RenderBuilding:
+	Armament:
+		Weapon: TeslaZap
+		LocalOffset: 0,0,427
+	AttackCharge:
+		ReloadTime: 120
+	RenderRangeCircle:
+	AutoTarget:
+	WithMakeAnimation:
+
+GTWR:
+	Inherits: ^Building
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Guard Tower
+		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks, Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 40
+		Prerequisites: barracks
+	Building:
+		Power: -10
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: HighV
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 8
+	AutoTarget:
+	DetectCloaked:
+		Range: 5
+	RenderDetectionCircle:
+	RenderRangeCircle:
+	WithMuzzleFlash:
+	Turreted:
+		ROT: 255
+
+ATWR:
+	Inherits: ^Building
+	RequiresPower:
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Advanced Guard Tower
+		Description: Anti-armor defensive structure.\n  Strong vs Light Vehicles, Tanks\n  Weak vs Infantry
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Owner: gdi
+	Building:
+		Power: -40
+		Footprint: _ x
+		Dimensions: 1,2
+	-GivesBuildableArea:
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 9c0
+	Turreted:
+		ROT: 255
+		Offset: 128,128,-85
+	Armament@PRIMARY:
+		Weapon: TowerMissle
+		LocalOffset: 256,128,0, 256,-128,0
+		LocalYaw: -100,100
+	Armament@SECONDARY:
+		Weapon: NestMachineGun
+		LocalOffset: 256,0,256
+	AttackTurreted:
+	AutoTarget:
+	BodyOrientation:
+		QuantizedFacings: 8
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 6
+	RenderRangeCircle:
+	DisabledOverlay:
+
+GUN:
+	Inherits: ^Building
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Turret
+		Description: Anti-Armor base defense.\n  Strong vs Tanks\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 45
+		Prerequisites: barracks
+		Owner: nod
+	Building:
+		Power: -20
+	-GivesBuildableArea:
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 12
+		InitialFacing: 50
+	RenderBuildingTurreted:
+	Armament:
+		Weapon: TurretLaser
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	AutoTarget:
+	-RenderBuilding:
+	-DeadBuildingState:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5
+	WithMakeAnimation:
+
+VLCN:
+	Inherits: ^Building
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Vulcan Turret
+		Description: Anti-Infantry base defense.\n  Strong vs Infantry\n  Weak vs Tanks, Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 45
+		Prerequisites: barracks
+		Owner: gdi
+	Building:
+		Power: -20
+	-GivesBuildableArea:
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 12
+		InitialFacing: 50
+	RenderBuildingTurreted:
+	Armament:
+		Weapon: Vulcan
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	AutoTarget:
+	-RenderBuilding:
+	-DeadBuildingState:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5
+	WithMakeAnimation:
+
+SILO:
+	Inherits: ^Building
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Tiberium Silo
+		Description: Stores processed Tiberium
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 35
+		Prerequisites: anyhq
+		Owner: gdi,nod,forgotten
+	Building:
+		Power: -10
+		Footprint: xx
+		Dimensions: 2,1
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 4c0
+	RenderBuildingSilo:
+	StoresResources:
+		PipCount: 10
+		PipColor: Green
+		Capacity: 2400
+	Selectable:
+		Bounds: 49,30
+	-RenderBuilding:
+	-EmitInfantryOnSell:
+	WithMakeAnimation:
+
+BRIK:
+	Inherits: ^Wall
+	Valued:
+		Cost: 100
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Barrier
+		Description: Stop units and blocks enemy fire.
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 30
+		Owner: gdi,nod,forgotten
+	Health:
+		HP: 250
+	Armor:
+		Type: Heavy
+	Wall:
+		CrushClasses: heavywall
+		-CrushSound:
+	SoundOnDamageTransition:
+		DestroyedSound: crumble.aud
+
+GRNH:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 2000
+	SeedsResource:
+		ResourceType: Tiberium
+		Interval: 200
+	Tooltip:
+		Name: Tiberium Greenhouse
+		Description: Tiberium festers within\n  Very Little Power Required.
+	ProvidesCustomPrerequisite:
+		Prerequisite: grnh
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq
+		Owner: forgotten
+	Building:
+		Power: -50
+		Footprint: ___ xxx xxx
+		Dimensions: 3,3
+	RequiresPower:
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 6c0
+	Bib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	Production:
+		Produces: greenhouse
+	ProductionQueue:
+		Type: greenhouse
+		Group: Infantry
+	RenderBuilding:
+		Scale: 1
+	NukePower:
+		Icon: abomb
+		ChargeTime: 300
+		Description: RTM Strike
+		LongDesc: Launch a Red Tiberium Missile.\nApplies heavy damage over a large area.
+		BeginChargeSound:
+		EndChargeSound: nukavail.aud
+		SelectTargetSound: select1.aud
+		LaunchSound: nuklnch1.aud
+		IncomingSound: nuke1.aud
+		MissileWeapon: atomic
+	SupportPowerChargeBar:
+	DisabledOverlay:
+	WithMakeAnimation:
+
+FSAM:
+	Inherits: ^ForgottenBuilding
+	RequiresPower:
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: SAM Site
+		Description: Anti-Air base defense.\n  Strong vs Aircraft\n  Weak vs Infantry, Tanks
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 50
+		Prerequisites: anyhq
+		Owner: forgotten
+	Building:
+		Power: -20
+		Footprint: xx
+		Dimensions: 2,1
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		ROT: 10
+		InitialFacing: 0
+	RenderBuildingTurreted:
+	Armament:
+		Weapon: SAMMissile
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	AutoTarget:
+	-RenderBuilding:
+	RenderRangeCircle:
+	DisabledOverlay:
+	WithMakeAnimation:
+
+SPORETREE:
+	Inherits: ^ForgottenBuilding
+	RenderBuilding:
+		Image: SILO
+	SeedsResource:
+		ResourceType: Tiberium
+		Interval: 2
+	Burns:
+		Interval: 20
+	RadarColorFromTerrain:
+		Terrain: Tiberium
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Tib farm
+		Description: provides tiberium
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 50
+		Prerequisites: grnh
+		Owner: forgotten
+	Building:
+		Power: -20
+		Footprint: xx
+		Dimensions: 2,1
+	Health:
+		HP: 100
+	WithMakeAnimation:
+FOXHOLE:
+	Inherits: ^Building
+	Tooltip:
+		Name: Pillbox
+		Description: Static defense with a fireport\nfor a garrisoned soldier.
+	Building:
+	-Buildable:
+	-GivesBuildableArea:
+	Valued:
+		Cost: 600
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 255
+	BodyOrientation:
+		QuantizedFacings: 8
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		InitialUnits: marrifle
+	-EmitInfantryOnSell:
+	DrawLineToTarget:
+	DetectCloaked:
+		Range: 6
+	RenderBuilding:
+		Image: foxhole
+	RenderRangeCircle:
+		FallbackRange: 6c0
+	AutoTarget:
+	AttackGarrisoned:
+		Armaments: garrisoned
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 86, 86, 86, 86, 86, 86
+

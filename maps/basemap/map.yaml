@@ -1,0 +1,501 @@
+Selectable: True
+
+MapFormat: 6
+
+RequiresMod: factions
+
+Title: TSA vs Rufetic
+
+Description: Rufetic Faction elements are attempting to overthrow and outskirts TSA base
+
+Author: Angus
+
+Tileset: TEMPERAT
+
+MapSize: 64,64
+
+Bounds: 14,14,48,44
+
+UseAsShellmap: False
+
+Type: Skirmish
+
+Options:
+	Crates: False
+	Fog: False
+	Shroud: True
+	AllyBuildRadius: False
+	FragileAlliances: False
+	StartingCash: 0
+	ConfigurableStartingUnits: False
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Race: gdi
+		Enemies: Nod,GDI
+	PlayerReference@Rufetic:
+		Name: Rufetic
+		Playable: True
+		Required: True
+		LockRace: True
+		Race: rfio
+		LockColor: True
+		ColorRamp: 0,0,0
+		LockSpawn: True
+		LockTeam: True
+		Allies: rfio
+		Enemies: TSA
+	PlayerReference@TSA:
+		Name: TSA
+		Playable: True
+		Required: True
+		LockRace: True
+		Race: tsa
+		LockColor: True
+		ColorRamp: 0,0,0
+		LockSpawn: True
+		LockTeam: True
+		Allies: TSA
+		Enemies: rfio
+	PlayerReference@Civillians:
+		Name: Civillians
+		NonCombatant: True
+		Race: gdi
+		Enemies: Nod
+
+Actors:
+	Actor0: v17
+		Location: 29,55
+		Owner: Neutral
+	Actor1: wood
+		Location: 17,55
+		Owner: Neutral
+	Actor2: wood
+		Location: 16,55
+		Owner: Neutral
+	Actor3: v14
+		Location: 30,54
+		Owner: Neutral
+	Actor4: v15
+		Location: 29,54
+		Owner: Neutral
+	Actor6: mpspawn
+		Location: 18,49
+		Owner: Neutral
+	Actor10: wood
+		Location: 24,53
+		Owner: Neutral
+	Actor11: wood
+		Location: 23,53
+		Owner: Neutral
+	Actor15: wood
+		Location: 16,53
+		Owner: Neutral
+	Actor26: v12
+		Location: 17,49
+		Owner: Neutral
+	Actor8: mpspawn
+		Location: 53,34
+		Owner: TSA
+	Actor39: t07
+		Location: 32,54
+		Owner: Neutral
+	Actor40: tc02
+		Location: 30,54
+		Owner: Neutral
+	Actor41: tc01
+		Location: 29,48
+		Owner: Neutral
+	Actor46: t07
+		Location: 22,44
+		Owner: Neutral
+	Actor47: tc01
+		Location: 17,43
+		Owner: Neutral
+	Actor50: tc01
+		Location: 19,55
+		Owner: Neutral
+	Actor62: tc04
+		Location: 14,43
+		Owner: Neutral
+	Actor106: tc04
+		Location: 16,55
+		Owner: Neutral
+	Actor121: t01
+		Location: 24,54
+		Owner: Neutral
+	TrigLos2Farm3: v07
+		Location: 19,46
+		Owner: Civillians
+		Health: 1
+		Facing: 0
+	TrigLos2Farm4: v01
+		Location: 18,44
+		Owner: Civillians
+		Health: 1
+		Facing: 0
+	TrigRNF1Farm1: v07
+		Location: 31,53
+		Owner: Civillians
+		Health: 1
+		Facing: 0
+	TrigRNF1Farm2: v09
+		Location: 31,50
+		Owner: Civillians
+		Health: 1
+		Facing: 0
+	TrigRNF2Farm1: v08
+		Location: 30,53
+		Owner: Civillians
+		Health: 1
+		Facing: 0
+	Actor154: c2
+		Location: 23,56
+		Owner: Civillians
+		Health: 1
+		Facing: 0
+		SubCell: 0
+	waypoint13: waypoint
+		Location: 16,47
+		Owner: Neutral
+	waypoint12: waypoint
+		Location: 16,51
+		Owner: Neutral
+	GDIReinfEntry1: waypoint
+		Location: 14,51
+		Owner: Neutral
+	GDIReinfEntry2: waypoint
+		Location: 14,47
+		Owner: Neutral
+	Actor7: nuk2
+		Location: 28,46
+		Owner: TSA
+	Actor5: fact
+		Location: 52,33
+		Owner: TSA
+	Actor9: weap
+		Location: 44,29
+		Owner: TSA
+	Actor12: hq
+		Location: 59,31
+		Owner: TSA
+	Actor13: eye
+		Location: 42,26
+		Owner: TSA
+	Actor14: pyle
+		Location: 46,33
+		Owner: TSA
+	Actor110: waypoint
+		Location: 27,31
+		Owner: Neutral
+	Actor20: nuke
+		Location: 49,30
+		Owner: TSA
+	Actor18: nuk2
+		Location: 33,28
+		Owner: TSA
+	Actor17: obli
+		Location: 44,40
+		Owner: TSA
+	Actor19: nuk2
+		Location: 35,28
+		Owner: TSA
+	Actor22: cycl
+		Location: 33,49
+		Owner: Neutral
+	Actor23: cycl
+		Location: 34,49
+		Owner: Neutral
+	Actor24: cycl
+		Location: 35,49
+		Owner: Neutral
+	Actor25: cycl
+		Location: 36,49
+		Owner: Neutral
+	Actor27: cycl
+		Location: 37,49
+		Owner: Neutral
+	Actor28: cycl
+		Location: 38,49
+		Owner: Neutral
+	Actor29: cycl
+		Location: 39,49
+		Owner: Neutral
+	Actor30: cycl
+		Location: 43,49
+		Owner: Neutral
+	Actor31: cycl
+		Location: 44,49
+		Owner: Neutral
+	Actor32: cycl
+		Location: 45,49
+		Owner: Neutral
+	Actor33: cycl
+		Location: 46,49
+		Owner: Neutral
+	Actor34: cycl
+		Location: 47,49
+		Owner: Neutral
+	Actor35: cycl
+		Location: 48,49
+		Owner: Neutral
+	Actor36: cycl
+		Location: 49,49
+		Owner: Neutral
+	Actor37: cycl
+		Location: 39,48
+		Owner: Neutral
+	Actor38: cycl
+		Location: 40,48
+		Owner: Neutral
+	Actor42: cycl
+		Location: 40,47
+		Owner: Neutral
+	Actor43: cycl
+		Location: 41,47
+		Owner: Neutral
+	Actor44: cycl
+		Location: 41,46
+		Owner: Neutral
+	Actor45: cycl
+		Location: 42,46
+		Owner: Neutral
+	Actor48: cycl
+		Location: 42,45
+		Owner: Neutral
+	Actor49: cycl
+		Location: 43,45
+		Owner: Neutral
+	Actor51: cycl
+		Location: 43,48
+		Owner: Neutral
+	Actor52: cycl
+		Location: 44,48
+		Owner: Neutral
+	Actor53: cycl
+		Location: 44,47
+		Owner: Neutral
+	Actor54: cycl
+		Location: 45,47
+		Owner: Neutral
+	Actor55: cycl
+		Location: 45,46
+		Owner: Neutral
+	Actor56: cycl
+		Location: 46,46
+		Owner: Neutral
+	Actor57: cycl
+		Location: 46,45
+		Owner: Neutral
+	Actor58: cycl
+		Location: 47,45
+		Owner: Neutral
+	Actor59: cycl
+		Location: 48,45
+		Owner: Neutral
+	Actor60: cycl
+		Location: 49,45
+		Owner: Neutral
+	Actor61: cycl
+		Location: 50,45
+		Owner: Neutral
+	Actor63: cycl
+		Location: 51,45
+		Owner: Neutral
+	Actor64: cycl
+		Location: 52,45
+		Owner: Neutral
+	Actor65: cycl
+		Location: 53,45
+		Owner: Neutral
+	Actor66: cycl
+		Location: 53,44
+		Owner: Neutral
+	Actor67: cycl
+		Location: 53,43
+		Owner: Neutral
+	Actor68: cycl
+		Location: 53,42
+		Owner: Neutral
+	Actor69: cycl
+		Location: 53,41
+		Owner: Neutral
+	Actor70: cycl
+		Location: 54,41
+		Owner: Neutral
+	Actor71: cycl
+		Location: 55,41
+		Owner: Neutral
+	Actor72: cycl
+		Location: 56,41
+		Owner: Neutral
+	Actor73: cycl
+		Location: 57,41
+		Owner: Neutral
+	Actor74: cycl
+		Location: 58,41
+		Owner: Neutral
+	Actor75: cycl
+		Location: 58,40
+		Owner: Neutral
+	Actor76: cycl
+		Location: 58,39
+		Owner: Neutral
+	Actor77: cycl
+		Location: 58,38
+		Owner: Neutral
+	Actor78: cycl
+		Location: 58,37
+		Owner: Neutral
+	Actor79: cycl
+		Location: 58,36
+		Owner: Neutral
+	Actor80: cycl
+		Location: 58,35
+		Owner: Neutral
+	Actor81: cycl
+		Location: 59,41
+		Owner: Neutral
+	Actor82: cycl
+		Location: 60,41
+		Owner: Neutral
+	Actor83: cycl
+		Location: 61,41
+		Owner: Neutral
+	Actor84: sbag
+		Location: 50,42
+		Owner: Neutral
+	Actor85: sbag
+		Location: 49,42
+		Owner: Neutral
+	Actor86: sbag
+		Location: 48,42
+		Owner: Neutral
+	Actor87: sbag
+		Location: 47,42
+		Owner: Neutral
+	Actor88: sbag
+		Location: 46,42
+		Owner: Neutral
+	Actor89: sbag
+		Location: 45,42
+		Owner: Neutral
+	Actor90: sbag
+		Location: 44,42
+		Owner: Neutral
+	Actor91: sbag
+		Location: 43,42
+		Owner: Neutral
+	Actor92: sbag
+		Location: 42,42
+		Owner: Neutral
+	Actor93: sbag
+		Location: 41,42
+		Owner: Neutral
+	Actor94: sbag
+		Location: 40,42
+		Owner: Neutral
+	Actor95: sbag
+		Location: 39,42
+		Owner: Neutral
+	Actor96: sbag
+		Location: 38,42
+		Owner: Neutral
+	Actor97: sbag
+		Location: 37,42
+		Owner: Neutral
+	Actor98: sbag
+		Location: 36,42
+		Owner: Neutral
+	Actor99: sbag
+		Location: 35,42
+		Owner: Neutral
+	Actor100: sbag
+		Location: 34,42
+		Owner: Neutral
+	Actor101: sbag
+		Location: 33,42
+		Owner: Neutral
+	Actor102: sbag
+		Location: 32,42
+		Owner: Neutral
+	Actor103: sbag
+		Location: 31,42
+		Owner: Neutral
+	Actor104: sbag
+		Location: 32,43
+		Owner: Neutral
+	Actor105: sbag
+		Location: 32,44
+		Owner: Neutral
+	Actor107: sbag
+		Location: 33,43
+		Owner: Neutral
+	Actor108: sbag
+		Location: 33,44
+		Owner: Neutral
+	Actor16: waypoint
+		Location: 28,14
+		Owner: Neutral
+	Actor109: waypoint
+		Location: 43,37
+		Owner: Neutral
+	Actor21: waypoint
+		Location: 54,30
+		Owner: Neutral
+	Actor112: waypoint
+		Location: 54,14
+		Owner: Neutral
+	Actor111: waypoint
+		Location: 51,37
+		Owner: Neutral
+	Actor113: waypoint
+		Location: 14,28
+		Owner: Neutral
+
+Smudges:
+	sc5 58,38 0:
+	sc6 55,37 0:
+	sc5 56,34 0:
+	sc5 47,34 0:
+	sc6 54,33 0:
+	sc3 47,33 0:
+	sc4 46,33 0:
+	sc2 55,32 0:
+	cr1 23,32 0:
+	sc3 48,31 0:
+	sc2 47,31 0:
+
+Rules:
+	World:
+		-SpawnMPUnits:
+		-MPStartLocations:
+		-CrateSpawner:
+		LuaScriptInterface:
+			LuaScripts: gdi04c.lua
+	Player:
+		-ConquestVictoryConditions:
+	^Infantry:
+		MustBeDestroyed:
+	^Vehicle:
+		MustBeDestroyed:
+	^Tank:
+		MustBeDestroyed:
+	^CivInfantry:
+		Health:
+			HP: 125
+
+Sequences:
+
+VoxelSequences:
+
+Weapons:
+
+Voices:
+
+Notifications:
+
+Translations:

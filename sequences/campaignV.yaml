@@ -1,0 +1,39 @@
+lst:
+	idle: lstnew
+		Start: 0
+		Facings: 32
+	unload: lstnew
+		Start: 0
+		Facings: 32
+	roof: lstnew2
+		Start: 0
+		Facings: 32
+boat:
+	left:
+		Start: 0
+		Facings: 32
+	damaged-left:
+		Start: 32
+		Facings: 32
+	critical-left:
+		Start: 64
+		Facings: 32
+	wake-left: wake
+		Start: 6
+		Length: 6
+		Offset: 1,2
+	right:
+		Start: 96
+		Facings: 32
+	damaged-right:
+		Start: 128
+		Facings: 32
+	critical-right:
+		Start: 160
+		Facings: 32
+	wake-right: wake
+		Start: 0
+		Length: 6
+		Offset: -1,2
+	icon: boaticnh
+		Start: 0

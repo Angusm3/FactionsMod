@@ -1,0 +1,66 @@
+WDGMLTA:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	CustomBuildTimeValue:
+		Value: 20
+	Tooltip:
+		Name: Militia
+		Description: Rifle soldier, \n   Carries Semi Automatic Rifle
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: wdg
+		BuildLimit: 10
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 60
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: M16
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: mlta
+	DetectCloaked:
+		Range: 2
+
+WDGSMAW:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	CustomBuildTimeValue:
+		Value: 20
+	Tooltip:
+		Name: SMAW Launcher
+		Description: Anti-tank infantry. \n  Strong vs Tanks \n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: wdg
+		BuildLimit: 5
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 40
+	Armament:
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: smaw
+	DetectCloaked:
+		Range: 2
+

@@ -1,0 +1,186 @@
+NTAAMLTA:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Militia
+		Description: Rifle soldier, \n   Carries Semi Automatic Rifle
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: ntaa
+		BuildLimit: 30
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 50
+	Armor:
+		none:
+	Armament:
+		Weapon: SKS
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: mlta
+	DetectCloaked:
+		Range: 2
+
+NTAASNPR1:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Scout
+		Description: Elite Scout, \n   Carries Bolt Action Rifle
+	Buildable:
+		BuildPaletteOrder: 50
+		Owner: ntaa
+		BuildLimit: 2
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 99
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 35
+	Armor:
+		Forgotten:
+	Armament@PRIMARY:
+		Weapon: Scout
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: snpr
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 100
+		CloakSound:
+		UncloakSound:
+		UncloakOnMove: no
+	DetectCloaked:
+		Range: 4
+	Transforms:
+		IntoActor: ntaasnpr2
+
+NTAASNPR2:
+	Inherits: NTAASNPR1
+	Tooltip:
+		Name: Scout (Prone)
+	-Buildable:
+	Mobile:
+		Speed: 28
+	Health:
+		HP: 140
+	Armament@PRIMARY:
+		Weapon: Scout2
+	RevealsShroud:
+		Range: 12c0
+	RenderInfantryProne:
+		Image: snprd
+	Cloak:
+		InitialDelay: 0
+		CloakDelay: 25
+	DetectCloaked:
+		Range: 5
+	Transforms:
+		IntoActor: ntaasnpr1
+
+NTAAMLTV:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Molotov Soldier
+		Description: Militia armed with molotov cocktails. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: ntaa
+		BuildLimit: 5
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 50
+	Armament:
+		Weapon: Molotov
+		LocalOffset: 0,0,427
+		FireDelay: 15
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		StandAnimations: stand, stand2
+		Image: mltvinf
+	Explodes:
+		Weapon: GrenadierExplode
+		EmptyWeapon: GrenadierExplode
+		Chance: 50
+	DetectCloaked:
+		Range: 2
+
+NTAASMAW:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: SMAW Launcher
+		Description: Anti-tank infantry. \n  Strong vs Tanks \n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: ntaa
+		BuildLimit: 8
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 45
+	Armament:
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: smaw
+	DetectCloaked:
+		Range: 2
+
+NTAAMRTR:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Forgotten Mortar
+		Description: Long Range artillery infantry. \n  Strong vs Ground \n  Weak vs Air
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: ntaa
+		BuildLimit: 3
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 28
+	Health:
+		HP: 150
+	Armament:
+		Weapon: MortarShell
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Image: mrtr
+	RenderRangeCircle:
+	DetectCloaked:
+		Range: 2
+

@@ -1,0 +1,596 @@
+sniper:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Scout
+		Description: Elite Scout, \n   Carries Bolt Action Rifle
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: ntaa, gdi
+		BuildLimit: 1
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 99
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 500
+	Armor:
+		Forgotten:
+	Armament@PRIMARY:
+		Weapon: Scout
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: snpr
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 100
+		CloakSound:
+		UncloakSound:
+		UncloakOnMove: no
+	DetectCloaked:
+		Range: 4
+	Transforms:
+		IntoActor: sniperd
+
+sniperD:
+	Inherits: sniper
+	Tooltip:
+		Name: Scout (Prone)
+	-Buildable:
+	Mobile:
+		Speed: 28
+	Health:
+		HP: 1000
+	Armament@PRIMARY:
+		Weapon: Scout2
+	RevealsShroud:
+		Range: 12c0
+	RenderInfantryProne:
+		Image: snprd
+	Cloak:
+		InitialDelay: 0
+		CloakDelay: 25
+	DetectCloaked:
+		Range: 5
+	Transforms:
+		IntoActor: sniper
+
+militia:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 80
+	Tooltip:
+		Name: Militia
+		Description: Rifle soldier, \n   Carries Semi Automatic Rifle
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: forgotten
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 50
+	Armor:
+		Forgotten:
+	Armament:
+		Weapon: SKS
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: mlta
+	DetectCloaked:
+		Range: 2
+
+E1:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Minigunner
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: gdi,nod
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 50
+	Armament@PRIMARY:
+		Weapon: M16
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: M16
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2,idle3,idle4
+		StandAnimations: stand, stand2
+	DetectCloaked:
+		Range: 2
+
+ECDR:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Elite Cadre
+		Description: Elite Cadre, \n   Carries Pulse Rifle \n Weak vs Tanks, Strong vs Everything Else
+	Buildable:
+		BuildPaletteOrder: 80
+		Owner: nod
+		Prerequisites: anyhq
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 800
+	Armor:
+		heavy:
+	Armament:
+		Weapon: PRifle
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+	DetectCloaked:
+		Range: 2
+
+cmbt:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Combat Engineer
+		Description: Combat Engineer, \n   Wields Dual 50. Caliber pistols \n Captures buildings
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: forgotten
+		Prerequisites: anyhq
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 42
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 400
+	Armor:
+		Forgotten, Heavy:
+	Armament@1:
+		Weapon: Deagle
+	Armament@2:
+		Weapon: Deagle
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+	DetectCloaked:
+		Range: 2
+	ExternalCaptures:
+
+hjkr:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Hijacker
+		Description: Infiltrates and captures enemy vehicles.\n  Strong vs Nothing\n  Weak vs Everything
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: forgotten
+		Prerequisites: anyhq
+		BuildLimit: 2
+	Selectable:
+		Bounds: 12,17,0,-6
+		Voice: HijackerVoice
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 100
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: tank, vehicle, husk
+		Sabotage: false
+	-AutoTarget:
+	AttackMove:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		StandAnimations: stand
+		Scale: 0.7
+	-GainsExperience:
+
+smaw:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 250
+	Tooltip:
+		Name: SMAW Launcher
+		Description: Anti-tank infantry. \n  Strong vs Tanks \n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: forgotten, hayl
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 45
+	Armament:
+		Weapon: Frockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+	DetectCloaked:
+		Range: 2
+
+mltvinf:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Molotov Soldiers
+		Description: Militia armed with molotov cocktails. \n  Strong vs Buildings, Infantry\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Owner: forgotten
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 50
+	Armament:
+		Weapon: Molotov
+		LocalOffset: 0,0,427
+		FireDelay: 15
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		StandAnimations: stand, stand2
+	Explodes:
+		Weapon: GrenadierExplode
+		EmptyWeapon: GrenadierExplode
+		Chance: 50
+	DetectCloaked:
+		Range: 2
+
+MEDI:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		Owner: gdi
+		Prerequisites: anyhq
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Medic
+		Description: Heals nearby infantry.\n  Strong vs Nothing\n  Weak vs Everything
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 80
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	AutoHeal:
+	Armament:
+		Weapon: Heal
+	AttackMedic:
+	TakeCover:
+	-AutoTarget:
+	AttackMove:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+
+MECH:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 70
+		Owner: nod
+		Prerequisites: anyhq
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Mechanic
+		Description: Repairs nearby vehicles.\n  Strong vs Nothing\n  Weak vs Everything
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 80
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	AutoHeal:
+	Armament:
+		Weapon: Repair
+	Captures:
+		CaptureTypes: husk
+		Sabotage: false
+	AttackMedic:
+	TakeCover:
+	-AutoTarget:
+	AttackMove:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+
+MRTR:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Forgotten Mortar
+		Description: Long Range artillery infantry. \n  Strong vs Ground \n  Weak vs Air
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: forgotten
+		Prerequisites: anyhq
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 28
+	Health:
+		HP: 150
+	Armament:
+		Weapon: MortarShell
+		LocalOffset: 256,43,341
+		FireDelay: 5
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+	RenderRangeCircle:
+	DetectCloaked:
+		Range: 2
+
+RMBO:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Commando
+		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+	Buildable:
+		BuildPaletteOrder: 50
+		Owner: gdi
+		BuildLimit: 1
+	Selectable:
+		Bounds: 12,17,0,-6
+		Voice: CommandoVoice
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 500
+	Passenger:
+		PipType: Red
+	RevealsShroud:
+		Range: 6c0
+	AutoTarget:
+		ScanRadius: 5
+	C4Demolition:
+		C4Delay: 45
+	Armament:
+		Weapon: Sniper
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2,idle3
+	AnnounceOnBuild:
+	AnnounceOnKill:
+	DetectCloaked:
+		Range: 2
+TANYA:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 120
+		BuildLimit: 1
+		Owner: gdi
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Tanya
+		Description: Elite commando infantry, armed with \ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles\n  Special Ability: Destroy Building with C4\n\nMaximum 1 can be trained
+	Selectable:
+		Voice: TanyaVoice
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	C4Demolition:
+		C4Delay: 45
+	Passenger:
+		PipType: Red
+	Armament@PRIMARY:
+		Weapon: Colt45
+	Armament@SECONDARY:
+		Weapon: Colt45
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+SEAL:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 120
+		BuildLimit: 1
+		Owner: gdi
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Seal
+		Description: Elite commando infantry, armed with \na p90 and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles\n  Special Ability: Destroy Building with C4\n\nMaximum 1 can be trained
+	Selectable:
+		Voice: SealVoice
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	C4Demolition:
+		C4Delay: 45
+	Passenger:
+		PipType: Red
+	Armament@PRIMARY:
+		Weapon: P90
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+SHOCKTROOPER:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 120
+		BuildLimit: 1
+		Owner: gdi, hayl
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Shock Trooper
+		Description: Elite commando infantry, armed with \na Mobile Tesla Rifle.\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Aircraft \n\nMaximum 1 can be trained
+	Selectable:
+		Voice: ShockVoice
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Passenger:
+		PipType: Red
+	Armament@PRIMARY:
+		Weapon: MiniTeslaZap
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+IVAN:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 120
+		BuildLimit: 1
+		Owner: gdi
+	Valued:
+		Cost: 0
+	DisguiseToolTip:
+		Name: Ivan
+		Description: Elite commando infantry, armed with C4. \nStrong vs Buildings\nWeak vs Everything \n\nMaximum 1 can be trained
+	Selectable:
+		Voice: IvanVoice
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	C4Demolition:
+		C4Delay: 15
+	Passenger:
+		PipType: Red
+	RenderDisguise:
+		IdleAnimations: idle1,idle2
+	-RenderInfantryProne:
+	Disguise:
+	AttackFrontal:
+	TakeCover:
+	Cloak:
+		InitialDelay: 100
+		CloakDelay: 25
+		CloakSound:
+		UncloakSound:
+		UncloakOnMove: yes
+LASERSNIPER:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 120
+		BuildLimit: 1
+		Owner: gdi, sid
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Laser Sniper
+		Description: Elite commando infantry, armed with \na Laser Rifle.\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Aircraft \n\nMaximum 1 can be trained
+	Selectable:
+		Voice: TanyaVoice
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 500
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Passenger:
+		PipType: Red
+	Armament@PRIMARY:
+		Weapon: LaserSniper
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+
+PVICE:
+	Inherits: VICE
+	-AttackWander:
+	PoisonedByTiberium:
+		Weapon: Tiberium2
+	Valued:
+		Cost: 1000
+	Health:
+		Radius: 128
+		HP: 600
+	Mobile:
+		Crushes: crate
+	Buildable:
+		Queue: greenhouse
+		BuildPaletteOrder: 10
+		Owner: forgotten
+	Tooltip:
+		Description: Mutated abomination that spits liquid tiberium.\n  Strong vs Infantry, Buildings\n  Weak vs Aircraft
+	DrawLineToTarget:
+	SelectionDecorations:
+	ActorLostNotification:
+	SelfHealing:
+		Step: 5
+		Ticks: 100
+		HealIfBelow: 200
+		DamageCooldown: 125
+

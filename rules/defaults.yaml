@@ -1,0 +1,304 @@
+^Vehicle:
+	AppearsOnRadar:
+	Mobile:
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 50
+			Road: 100
+			Tiberium: 50
+			BlueTiberium: 50
+			Beach: 50
+		ROT: 5
+	SelectionDecorations:
+	Selectable:
+		Voice: VehicleVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Vehicle
+	Capturable:
+		Type: vehicle
+		AllowAllies: False
+		AllowNeutral: True
+		AllowEnemies: True
+	Repairable:
+	Chronoshiftable:
+	Passenger:
+		CargoType: Vehicle
+	IronCurtainable:
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+	AttackMove:
+	WithSmoke:
+	CombatDebugOverlay:
+	Guard:
+	Guardable:
+	BodyOrientation:
+	UpdatesPlayerStatistics:
+	Cloak:
+		RequiresCrate: true
+		InitialDelay: 15
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+	Huntable:
+	LuaScriptEvents:
+	ScriptTriggers:
+
+^Tank:
+	AppearsOnRadar:
+	Mobile:
+		Crushes: wall, crate, infantry
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Tiberium: 70
+			BlueTiberium: 70
+			Beach: 70
+		ROT: 5
+	SelectionDecorations:
+	Selectable:
+		Voice: VehicleVoice
+	TargetableUnit:
+		TargetTypes: Ground, C4
+	Buildable:
+		Queue: Vehicle
+	Capturable:
+		Type: tank
+		AllowAllies: False
+		AllowNeutral: True
+		AllowEnemies: True
+	Repairable:
+	Chronoshiftable:
+	Passenger:
+		CargoType: Vehicle
+	IronCurtainable:
+	HiddenUnderFog:
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+	AttackMove:
+	WithSmoke:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	CombatDebugOverlay:
+	Guard:
+	Guardable:
+	BodyOrientation:
+	UpdatesPlayerStatistics:
+	Cloak:
+		RequiresCrate: true
+		InitialDelay: 15
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+	Huntable:
+	LuaScriptEvents:
+	ScriptTriggers:
+
+^ForgottenInfantry:
+	Inherits: ^Infantry
+	AppearsOnRadar:
+	Health:
+		Radius: 128
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5c0
+	AutoTarget:
+		ScanRadius: 4
+	Mobile:
+		Crushes: crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Rough: 80
+			Road: 100
+			Tiberium: 120
+				PathingCost: 100
+			BlueTiberium: 120
+				PathingCost: 0
+			Beach: 80
+	SelectionDecorations:
+	Selectable:
+		Voice: GenericVoice
+	TargetableUnit:
+		TargetTypes: Ground
+	Buildable:
+		Queue: Infantry
+	TakeCover:
+		ProneSpeed: 0.6
+	RenderInfantryProne:
+	AttackMove:
+	Passenger:
+		CargoType: Infantry
+	HiddenUnderFog:
+	PoisonedByTiberium:
+		Weapon: Tiberium2
+	GainsExperience:
+	GivesExperience:
+	DrawLineToTarget:
+	ActorLostNotification:
+	SpawnViceroid:
+		Probability: 10
+	CrushableInfantry:
+		WarnProbability: 60
+	CombatDebugOverlay:
+	Guard:
+	Guardable:
+	BodyOrientation:
+	SelfHealing:
+		Step: 5
+		Ticks: 100
+		HealIfBelow: 1
+		DamageCooldown: 125
+		RequiresTech: InfantryHealing
+	UpdatesPlayerStatistics:
+
+^ForgottenBuilding:
+	AppearsOnRadar:
+	SelectionDecorations:
+	Selectable:
+		Priority: 3
+	TargetableBuilding:
+		TargetTypes: Ground, C4
+	Demolishable:
+	Armor:
+		Type: Wood
+	Building:
+		Adjacent: 4
+		RequiresBaseProvider: true
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: constru2.aud, hvydoor1.aud
+		SellSounds: cashturn.aud
+		TerrainTypes: Clear,Road,Tiberium,BlueTiberium
+	SoundOnDamageTransition:
+		DamagedSound: xplos.aud
+		DestroyedSound: crumble.aud
+	Buildable:
+		Queue: Building
+	GivesBuildableArea:
+	RenderBuilding:
+	WithBuildingExplosion:
+	DeadBuildingState:
+	EmitInfantryOnSell:
+		ActorTypes: cmbt,militia
+	MustBeDestroyed:
+	GivesExperience:
+	CaptureNotification:
+		Notification: BuildingCaptured
+		NewOwnerVoice: no
+	ActorLostNotification:
+		Notification: BuildingLost
+	EditorAppearance:
+		RelativeToTopLeft: yes
+	ShakeOnDeath:
+	Capturable:
+		Type: building
+		AllowAllies: False
+		AllowNeutral: True
+		AllowEnemies: True
+	ExternalCapturable:
+	ExternalCapturableBar:
+	CombatDebugOverlay:
+	Guardable:
+		Range: 3
+	BodyOrientation:
+	FrozenUnderFog:
+	UpdatesPlayerStatistics:
+	EngineerRepairable:
+	Huntable:
+	LuaScriptEvents:
+	ScriptTriggers:
+	WithMakeAnimation:
+
+^Building:
+	AppearsOnRadar:
+	SelectionDecorations:
+	Selectable:
+		Priority: 3
+	TargetableBuilding:
+		TargetTypes: Ground, C4
+	Demolishable:
+	Armor:
+		Type: Wood
+	Building:
+		Adjacent: 4
+		RequiresBaseProvider: true
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: constru2.aud, hvydoor1.aud
+		SellSounds: cashturn.aud
+		TerrainTypes: Clear,Road
+	SoundOnDamageTransition:
+		DamagedSound: xplos.aud
+		DestroyedSound: crumble.aud
+	Buildable:
+		Queue: Building
+	GivesBuildableArea:
+	RenderBuilding:
+	WithBuildingExplosion:
+	DeadBuildingState:
+	EmitInfantryOnSell:
+		ActorTypes: e6,e1
+	MustBeDestroyed:
+	GivesExperience:
+	CaptureNotification:
+		Notification: BuildingCaptured
+		NewOwnerVoice: no
+	ActorLostNotification:
+		Notification: BuildingLost
+	EditorAppearance:
+		RelativeToTopLeft: yes
+	ShakeOnDeath:
+	Capturable:
+		Type: building
+		AllowAllies: False
+		AllowNeutral: True
+		AllowEnemies: True
+	ExternalCapturable:
+	ExternalCapturableBar:
+	CombatDebugOverlay:
+	Guardable:
+		Range: 3
+	BodyOrientation:
+	FrozenUnderFog:
+	UpdatesPlayerStatistics:
+	EngineerRepairable:
+	Huntable:
+	LuaScriptEvents:
+	ScriptTriggers:
+	WithMakeAnimation:
+
+^Husk:
+	Health:
+		HP: 250
+	Armor:
+		Type: Light
+	Husk:
+		AllowedTerrain: Clear, Rough, Road, Tiberium, BlueTiberium, Beach
+	HiddenUnderFog:
+	AppearsOnRadar:
+	Burns:
+		Interval: 2
+	TargetableUnit:
+	TransformOnCapture:
+		ForceHealthPercentage: 25
+	Capturable:
+		Type: husk
+		AllowAllies: True
+		AllowNeutral: True
+		AllowEnemies: True
+	BelowUnits:
+	BodyOrientation:
+	LuaScriptEvents:
+	ScriptTriggers:
+

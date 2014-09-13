@@ -1,0 +1,283 @@
+fhtnk:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: fhtnkicon
+		Start: 0
+ftch:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: minigun
+		Start: 0
+		Length: 6
+		Facings: 8
+	icon: ftchicon
+		Start: 0
+fmcv:
+	idle: mcv
+		Start: 0
+		Facings: 32
+	icon: mcvicnh
+		Start: 0
+
+fharv:
+	idle: harv
+		Start: 0
+		Facings: 32
+	harvest: harv
+		Start: 32
+		Length: 4
+		Facings: 8
+		Tick: 60
+	dock: harvdump
+		Start: 0
+		Length: 7
+	dock-loop: harvdump
+		Start: 7
+		Length: 1
+	icon: harvicnh
+		Start: 0
+bdzr:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: minigun
+		Start: 0
+		Length: 6
+		Facings: 8
+	icon: bdzricon
+		Start: 0
+wlvr:
+	stand:
+		Start: 96
+		Facings: 8
+	shoot: # only plays first frame, ...how?
+		Start: 104
+		Length: 4
+		Facings: -8
+	run:
+		Start: 0
+		Facings: -8
+		Length: 12
+	icon: wlvricon
+		Start: 0
+	die1:
+		Start: 96
+		Length: 1
+	die2:
+		Start: 96
+		Length: 1
+	die3:
+		Start: 96
+		Length: 1
+	die4:
+		Start: 96
+		Length: 1
+	die5:
+		Start: 96
+		Length: 1
+	die6:
+		Start: 96
+		Length: 1
+spc:
+	idle:
+		Start: 0
+		Facings: 32
+	close:
+		Start: 30
+		Length: 1
+	unload:
+		Start: 31
+	icon: spcicon
+		Start: 0
+mammoth2:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: mammoth2icon
+		Start: 0
+medtank:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: mtnkicnh
+		Start: 0
+osiris:
+	stand:
+		Start: 96
+		Facings: -8
+	shoot: # only plays first frame, ...how?
+		Start: 104
+		Length: 2
+		Facings: -8
+	run:
+		Start: 0
+		Facings: -8
+		Length: 12
+	icon: wlvricon
+		Start: 0
+	die1: 
+		Start: 96
+		Length: 1
+	die2:
+		Start: 96
+		Length: 1
+	die3:
+		Start: 96
+		Length: 1
+	die4:
+		Start: 96
+		Length: 1
+	die5:
+		Start: 96
+		Length: 1
+	die6:
+		Start: 96
+		Length: 1
+lastnk:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: ltnkicnh
+		Start: 0
+leopard:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: mtnkicnh
+		Start: 0
+quadcannon:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: quadcannonicon
+		Start: 0
+churchill:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: mtnkicnh
+		Start: 0
+btr:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: apcmuz
+		Start: 0
+		Length: 3
+		Stride: 6
+		Facings: 8
+	close:
+		Start: 32
+		Length: 3
+	unload:
+		Start: 32
+	icon: apcicnh
+		Start: 0
+marder:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: apcmuz
+		Start: 0
+		Length: 3
+		Stride: 6
+		Facings: 8
+	close:
+		Start: 32
+		Length: 3
+	unload:
+		Start: 32
+	icon: apcicnh
+		Start: 0
+teslalighttank:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: teslalighttankicon
+		Start: 0
+teslamedtank:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: teslalighttankicon
+		Start: 0
+teslamammoth:
+	idle:
+		Start: 0
+		Facings: 32
+	turret:
+		Start: 32
+		Facings: 32
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: mammoth2icon
+		Start: 0

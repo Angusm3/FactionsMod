@@ -1,0 +1,30 @@
+HAYLMLTA:
+	Inherits: ^ForgottenInfantry
+	Valued:
+		Cost: 80
+	Tooltip:
+		Name: Militia
+		Description: Rifle soldier, \n   Carries Semi Automatic Rifle
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: hayl
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 50
+	Armor:
+		none:
+	Armament:
+		Weapon: SKS
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: mlta
+	DetectCloaked:
+		Range: 2
+

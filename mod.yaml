@@ -1,0 +1,302 @@
+Metadata:
+	Title: Tanzadol Factions
+	Description: Tanzadol Factions
+	Version: {INDEV}
+	Author: Angusm3
+	
+	
+Folders:
+	.
+	./mods/cnc
+	./mods/cnc/bits
+	./mods/cnc/bits/jungle
+	./mods/cnc/bits/ss
+#	./mods/cnc/uibits
+	~^Content/cnc
+	
+	./mods/factions
+	./mods/factions/bits
+	./mods/factions/uibits
+	./mods/factions/audio
+
+MapFolders:
+	./mods/factions/maps
+	~^/maps/factions
+SupportsMapsFrom: cnc
+Packages:
+	speech.mix
+	conquer.mix
+	sounds.mix
+	tempicnh.mix
+	temperat.mix
+	winter.mix
+	desert.mix
+	snow.mix
+	~movies-gdi.mix
+	~movies-nod.mix
+	~movies.mix
+	~scores.mix
+	~scores2.mix
+	~transit.mix
+	./mods/factions/bits/interior.mix
+
+
+Rules:
+
+	mods/factions/rules/defaultsV.yaml
+	mods/factions/rules/systemV.yaml
+	mods/factions/rules/structuresV.yaml
+	mods/factions/rules/infantryV.yaml
+	mods/factions/rules/vehiclesV.yaml
+	mods/factions/rules/treesV.yaml
+	mods/factions/rules/civilianV.yaml
+	mods/factions/rules/civilian-desertV.yaml
+	mods/factions/rules/techV.yaml
+	mods/factions/rules/shipsV.yaml
+	mods/factions/rules/aircraftV.yaml
+	mods/factions/rules/husksV.yaml
+	
+	
+	mods/factions/rules/system.yaml
+	mods/factions/rules/defaults.yaml
+	mods/factions/rules/infantry.yaml
+	mods/factions/rules/structures.yaml
+	mods/factions/rules/vehicles.yaml
+	mods/factions/rules/husks.yaml
+	mods/factions/rules/aircraft.yaml
+
+	
+	
+
+	mods/factions/factionrules/bait/infantry.yaml
+	mods/factions/factionrules/bait/structures.yaml
+	mods/factions/factionrules/bait/vehicles.yaml
+
+	mods/factions/factionrules/col/infantry.yaml
+	mods/factions/factionrules/col/structures.yaml
+	mods/factions/factionrules/col/vehicles.yaml
+
+	mods/factions/factionrules/gsa/infantry.yaml
+	mods/factions/factionrules/gsa/structures.yaml
+	mods/factions/factionrules/gsa/vehicles.yaml
+
+	mods/factions/factionrules/hayl/infantry.yaml
+	mods/factions/factionrules/hayl/structures.yaml
+	mods/factions/factionrules/hayl/vehicles.yaml
+	
+	mods/factions/factionrules/kant/infantry.yaml
+	mods/factions/factionrules/kant/structures.yaml
+	mods/factions/factionrules/kant/vehicles.yaml
+	
+	mods/factions/factionrules/ntaa/infantry.yaml
+	mods/factions/factionrules/ntaa/structures.yaml
+	mods/factions/factionrules/ntaa/vehicles.yaml
+	
+	mods/factions/factionrules/rfio/infantry.yaml
+	mods/factions/factionrules/rfio/structures.yaml
+	mods/factions/factionrules/rfio/vehicles.yaml
+	
+	mods/factions/factionrules/sid/infantry.yaml
+	mods/factions/factionrules/sid/structures.yaml
+	mods/factions/factionrules/sid/vehicles.yaml
+	
+	mods/factions/factionrules/tsa/infantry.yaml
+	mods/factions/factionrules/tsa/structures.yaml
+	mods/factions/factionrules/tsa/vehicles.yaml
+	
+	mods/factions/factionrules/mar/infantry.yaml
+	mods/factions/factionrules/mar/structures.yaml
+	mods/factions/factionrules/mar/vehicles.yaml
+	
+	mods/factions/factionrules/shyo/infantry.yaml
+	mods/factions/factionrules/shyo/structures.yaml
+	mods/factions/factionrules/shyo/vehicles.yaml
+	
+	mods/factions/factionrules/wdg/infantry.yaml
+	mods/factions/factionrules/wdg/structures.yaml
+	mods/factions/factionrules/wdg/vehicles.yaml
+
+	mods/factions/factionrules/mlv/infantry.yaml
+	mods/factions/factionrules/mlv/structures.yaml
+	mods/factions/factionrules/mlv/vehicles.yaml
+	
+	
+	
+
+#	mods/fgtn/rules/assault_apc.yaml
+
+Sequences:
+	mods/factions/sequences/structuresV.yaml
+	mods/factions/sequences/vehiclesV.yaml
+	mods/factions/sequences/infantryV.yaml
+	mods/factions/sequences/aircraftV.yaml
+	mods/factions/sequences/decorationsV.yaml
+	mods/factions/sequences/miscV.yaml
+	mods/factions/sequences/funparkV.yaml
+	mods/factions/sequences/civilianV.yaml
+	mods/factions/sequences/campaignV.yaml
+
+	
+
+	mods/factions/sequences/infantry.yaml
+	mods/factions/sequences/structures.yaml
+	mods/factions/sequences/vehicles.yaml
+	mods/factions/sequences/misc.yaml
+	mods/factions/sequences/aircraft.yaml
+	
+	
+	
+	
+	
+	
+	
+
+Cursors:
+	mods/cnc/cursors.yaml
+
+Chrome:
+	mods/cnc/chrome.yaml
+	
+	mods/factions/chrome.yaml
+	
+Assemblies:
+	mods/ra/OpenRA.Mods.RA.dll
+	mods/cnc/OpenRA.Mods.Cnc.dll
+	mods/d2k/OpenRA.Mods.D2k.dll
+
+
+ChromeLayout:
+	mods/factions/chrome/install.yaml
+	mods/factions/chrome/mainmenu.yaml
+	mods/factions/chrome/serverbrowser.yaml
+	mods/factions/chrome/createserver.yaml
+	mods/factions/chrome/directconnect.yaml
+	mods/factions/chrome/lobby.yaml
+	mods/factions/chrome/lobby-mappreview.yaml
+	mods/factions/chrome/lobby-playerbin.yaml
+	mods/factions/chrome/lobby-dialogs.yaml
+	mods/factions/chrome/connection.yaml
+	mods/factions/chrome/color-picker.yaml
+	mods/factions/chrome/mapchooser.yaml
+	mods/factions/chrome/replaybrowser.yaml
+	mods/factions/chrome/ingame.yaml
+	mods/factions/chrome/ingame-chat.yaml
+	mods/factions/chrome/ingamemenu.yaml
+	mods/factions/chrome/music.yaml
+	mods/factions/chrome/settings.yaml
+	mods/factions/chrome/credits.yaml
+	mods/factions/chrome/cheats.yaml
+	mods/factions/chrome/dialogs.yaml
+	mods/factions/chrome/objectives.yaml
+	mods/factions/chrome/tooltips.yaml
+	mods/factions/chrome/irc.yaml
+	mods/factions/chrome/assetbrowser.yaml
+	mods/factions/chrome/missionbrowser.yaml
+
+Weapons:
+	mods/factions/weaponsV.yaml
+	
+	mods/factions/weapons.yaml
+
+Movies:
+	mods/cnc/movies-gdi.yaml
+	mods/cnc/movies-nod.yaml
+	
+Translations:
+	mods/cnc/languages/english.yaml
+
+Voices:
+	mods/cnc/voices.yaml
+	
+	mods/factions/voices.yaml
+
+Notifications:
+	mods/cnc/notifications.yaml
+	
+	mods/factions/notifications.yaml
+
+Music:
+	mods/cnc/music.yaml
+
+TileSets:
+	mods/cnc/tilesets/desert.yaml
+	mods/cnc/tilesets/winter.yaml
+	mods/cnc/tilesets/snow.yaml
+	mods/cnc/tilesets/temperat.yaml
+	mods/cnc/tilesets/jungle.yaml
+
+LoadScreen: CncLoadScreen
+	Image: mods/cnc/uibits/chrome.png
+	Text: Loading
+
+ContentInstaller:
+	TestFiles: conquer.mix, desert.mix, sounds.mix, speech.mix, temperat.mix, tempicnh.mix, winter.mix
+	InstallerBackgroundWidget: INSTALL_BACKGROUND
+	InstallerMenuWidget: INSTALL_PANEL
+	FilesToCopy: CONQUER.MIX, DESERT.MIX, SCORES.MIX, SOUNDS.MIX, TEMPERAT.MIX, WINTER.MIX
+	FilesToExtract: speech.mix, tempicnh.mix, transit.mix
+	PackageMirrorList: http://www.openra.net/packages/cnc-mirrors.txt
+	DiskTestFiles: conquer.mix, desert.mix, install/setup.z
+	PackageToExtractFromCD: install/setup.z
+	ExtractFilesFromCD: speech.mix, tempicnh.mix, transit.mix
+	CopyFilesFromCD: conquer.mix, desert.mix, general.mix, scores.mix, sounds.mix, temperat.mix, winter.mix
+	ShippedSoundtracks: 2
+	MusicPackageMirrorList: http://www.openra.net/packages/cnc-music-mirrors.txt
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+
+LobbyDefaults:
+	AllowCheats: false
+	Crates: true
+	StartingUnitsClass: light
+	FragileAlliances: false
+	Shroud: true
+	Fog: true
+	TechLevel: Unrestricted
+
+ChromeMetrics:
+	mods/cnc/metrics.yaml
+
+Fonts:
+	Regular:
+		Font:FreeSans.ttf
+		Size:14
+	Bold:
+		Font:FreeSansBold.ttf
+		Size:14
+	Title:
+		Font:FreeSansBold.ttf
+		Size:32
+	MediumBold:
+		Font:FreeSansBold.ttf
+		Size:18
+	BigBold:
+		Font:FreeSansBold.ttf
+		Size:24
+	Tiny:
+		Font:FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font:FreeSansBold.ttf
+		Size:10
+
+LuaScripts:
+	mods/common/lua/utils.lua
+	mods/common/lua/openra.lua
+	mods/common/lua/map.lua
+	mods/common/lua/actor.lua
+	mods/common/lua/team.lua
+	mods/common/lua/media.lua
+	mods/common/lua/mission.lua
+	mods/common/lua/reinforcements.lua
+	mods/common/lua/supportpowers.lua
+	mods/common/lua/rules.lua
+	mods/common/lua/production.lua
+	mods/common/lua/facing.lua
+
+Missions:
+	mods/factions/missions.yaml
+

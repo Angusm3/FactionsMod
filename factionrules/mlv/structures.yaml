@@ -1,0 +1,234 @@
+MLVFACT:
+	Inherits: ^Building
+	-Buildable:
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Construction Yard
+		Description: Builds structures
+	Building:
+		Power: 15
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 1400
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 10c0
+	Bib:
+	Production:
+		Produces: Building,Defense
+	ProductionQueue@Building:
+		Type: Building
+		Group: Building
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@Defense:
+		Type: Defense
+		Group: Defense
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	BaseBuilding:
+	ProductionBar:
+	BaseProvider:
+		Cooldown: 75
+		Range: 14
+	RenderBuilding:
+		Image: fact
+	WithMakeAnimation:
+
+MLVNUKE:
+	Inherits: ^Building
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Power Plant
+		Description: Generates power
+	ProvidesCustomPrerequisite:
+		Prerequisite: anypower
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: mlv
+		Prerequisites: fact
+	Building:
+		Power: 100
+		Footprint: x_ xx
+		Dimensions: 2,2
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	RenderBuilding:
+		Image: nuke
+	WithMakeAnimation:
+
+MLVRFNRY:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Tiberium Refinery
+		Description: Processes raw Tiberium\ninto useable resources
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: anypower
+		Owner: mlv
+	Building:
+		Power: -30
+		Footprint: _x_ xxx ===
+		Dimensions: 3,3
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 6c0
+	Bib:
+	TiberiumRefinery:
+		DockOffset: 0,2
+		TickRate: 15
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 1500
+	Selectable:
+		Bounds: 73,72
+	CustomSellValue:
+		Value: 300
+	FreeActor:
+		Actor: HARV
+		InitialActivity: FindResources
+		SpawnOffset: 1,2
+		Facing: 64
+	WithResources:
+	RenderBuilding:
+		Image: rfnry
+	WithMakeAnimation:
+
+MLVTENT:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Tent Barracks
+		Description: Trains infantry
+	ProvidesCustomPrerequisite:
+		Prerequisite: barracks
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: mlv
+	Building:
+		Power: -5
+		Footprint: __ xx xx
+		Dimensions: 2,3
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 5c0
+	Bib:
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	Production:
+		Produces: Infantry
+	ProductionQueue:
+		Type: Infantry
+		Group: Infantry
+		BuildSpeed: .4
+		LowPowerSlowdown: 1
+	ProductionBar:
+	RenderBuilding:
+		Image: tent
+	WithMakeAnimation:
+
+MLVSAL:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Salvage Yard
+		Description: Assembly point for\nvehicle reinforcements\nrepairs allied vehicles near it
+	ProvidesCustomPrerequisite:
+		Prerequisite: salvage
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: barracks
+		Owner: mlv
+	Building:
+		Power: -15
+		Footprint: ___ xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 1000
+	Armament:
+		Weapon: Repair
+	RevealsShroud:
+		Range: 4c0
+	Bib:
+	-RenderBuilding:
+	RenderBuildingWarFactory:
+		Image: fsal
+	RallyPoint:
+	Exit@1:
+		SpawnOffset: -341,-341,0
+		ExitCell: 0,2
+	Production:
+		Produces: Vehicle
+	ProductionQueue:
+		Type: Vehicle
+		Group: Vehicle
+		BuildSpeed: .4
+		LowPowerSlowdown: 1
+	ProductionBar:
+	RenderRangeCircle:
+	AttackTurreted:
+	Turreted:
+		ROT: 255
+	AutoHeal:
+	WithMakeAnimation:
+
+MLVMGNST:
+	Inherits: ^ForgottenBuilding
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Machine Gun Nest
+		Description: Anti-Infantry base defense.\n  Strong vs Infantry\n  Weak vs Tanks
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 10
+		Owner: mlv
+	Building:
+		Power: -0
+	-GivesBuildableArea:
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 12
+		InitialFacing: 50
+	RenderBuildingTurreted:
+		Image: mgnst
+	Armament@1:
+		Weapon: NestMachineGun
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	AutoTarget:
+	-RenderBuilding:
+	-DeadBuildingState:
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	DetectCloaked:
+		Range: 5
+	WithMakeAnimation:
+

@@ -1,0 +1,246 @@
+HAYLMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq
+		Owner: hayl
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		Image: mcv
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+HAYLHARV:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: salvage
+		Owner: hayl
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Harvester:
+		Resources: Tiberium, BlueTiberium
+		PipCount: 7
+		Capacity: 20
+		LoadTicksPerBale: 6
+		UnloadTicksPerBale: 12
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	AttackMove:
+	LeavesHusk:
+		HuskActor: HARV.Husk
+	-GainsExperience:
+	RenderHarvester:
+		Image: harv
+
+HAYLTCH:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Technical
+		Description: Lightweight Scout Truck\n  Strong vs Infantry, Air\n  Weak vs Everything else
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: hayl
+	Mobile:
+		Speed: 213
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+		Offset: -360,0,210
+	Armament:
+		Weapon: TechMachineGun
+		Recoil: 64
+		RecoilRecovery: 26
+		LocalOffset: 0,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: ftch
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FTCH.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+TLTNK:
+	Inherits: ^Tank
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 180
+		BuildLimit: 3
+		Owner: hayl
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Tesla Light Tank
+		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles\n  and Buildings  \n  Weak vs Aircraft
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 113
+		Crushes: wall, crate, infantry
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: LightTesla
+		LocalOffset: 0,0,213
+	WithTurret:
+	AttackTurreted:
+	Turreted:
+		ROT: 5
+		Offset: 0,0,0
+	RenderUnit:
+		Image: teslalighttank
+	Selectable:
+		Bounds: 28,28,0,0
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+TMTNK:
+	Inherits: ^Tank
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 180
+		BuildLimit: 2
+		Owner: hayl
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Tesla Medium Tank
+		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles\n  and Buildings  \n  Weak vs Aircraft
+	Health:
+		HP: 500
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 113
+		Crushes: wall, crate, infantry
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: MedTesla
+		LocalOffset: 0,0,213
+	WithTurret:
+	AttackTurreted:
+	Turreted:
+		ROT: 5
+		Offset: 0,0,0
+	RenderUnit:
+		Image: teslamedtank
+	Selectable:
+		Bounds: 28,28,0,0
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+THTNK:
+	Inherits: ^Tank
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 180
+		BuildLimit: 1
+		Owner: hayl
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Tesla Mammoth
+		Description: Tank with mounted tesla coil.\n  Strong vs Infantry, Vehicles\n  and Buildings  \n  Weak vs Aircraft
+	Health:
+		HP: 1200
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 80
+		Crushes: wall, crate, infantry
+	RevealsShroud:
+		Range: 7c0
+	Armament@PRIMARY:
+		Weapon: HeavyTesla
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: LightTesla
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		Recoil: 42
+		MuzzleSequence: muzzle
+	Armament@TERTIARY:
+		Name: tertiary
+		Weapon: LightTesla
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		Recoil: 42
+		MuzzleSequence: muzzle
+	WithTurret:
+	AttackTurreted:
+	Turreted:
+		ROT: 5
+		Offset: 0,0,0
+	RenderUnit:
+		Image: teslamammoth
+	Selectable:
+		Bounds: 28,28,0,0
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall

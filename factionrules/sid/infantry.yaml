@@ -1,0 +1,99 @@
+SIDMLTA:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: lmg trooper
+		Description: Carries light machinegun
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: sid
+		BuildLimit: 20
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 50
+	Armor:
+		none:
+	Armament:
+		Weapon: Coaxial
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: mlta
+	DetectCloaked:
+		Range: 2
+
+SIDSNIPER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Scout
+		Description: Elite Scout, \n   Carries Bolt Action Rifle
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: sid
+		BuildLimit: 2
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 35
+	Armor:
+		none:
+	Armament@PRIMARY:
+		Weapon: Scout2
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+		Image: snpr
+	Cloak:
+		InitialDelay: 250
+		CloakDelay: 100
+		CloakSound:
+		UncloakSound:
+		UncloakOnMove: yes
+	DetectCloaked:
+		Range: 4
+
+SIDATSNIPER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Scout
+		Description: Elite Long Range AT \n   Carries AT Rifle
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: sid
+		BuildLimit: 1
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 5c0
+	Health:
+		HP: 35
+	Armor:
+		none:
+	Armament@PRIMARY:
+		Weapon: ATSniper
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.9
+		Image: atsniper
+	DetectCloaked:
+		Range: 4
+

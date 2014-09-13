@@ -1,0 +1,140 @@
+MARRIFLE:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Rifleman
+		Description: Rifle soldier, \n   Carries Bolt Action Rifle
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: mar
+		BuildLimit: 10
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 50
+	Armor:
+		none:
+	Armament:
+		Weapon: SKS
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 1
+	DetectCloaked:
+		Range: 2
+MARMGTEAM:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: MG Team
+		Description: MG Team (mobile)
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: mar
+		BuildLimit: 2
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 99
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 140
+	Armor:
+		none:
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 1
+	DetectCloaked:
+		Range: 4
+	Transforms:
+		IntoActor: marmgteam2
+
+MARMGTEAM2:
+	Inherits: MARMGTEAM
+	Tooltip:
+		Name: MG Team (deployed)
+	-Buildable:
+	-Mobile:
+	Immobile:
+	Health:
+		HP: 140
+	Armament@PRIMARY:
+		Weapon: MarMG
+	RevealsShroud:
+		Range: 5c0
+	RenderInfantryProne:
+	DetectCloaked:
+		Range: 4
+	Transforms:
+		IntoActor: marmgteam
+
+MARFLAMMENWERFER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Flammenwerfer
+		Description: Flamethrower, \n   Carries FLAMETHROWER
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: mar
+		BuildLimit: 3
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 200
+	Armor:
+		none:
+	Armament:
+		Weapon: MarFlamethrower
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 1
+		Image: flammenwerfer
+	DetectCloaked:
+		Range: 2
+
+MARPANZERSHREK:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Panzershrek
+		Description: Panzershrecker, \n   Carries the panzershrekt
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: mar
+		BuildLimit: 4
+	Selectable:
+		Bounds: 12,17,0,-6
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 6c0
+	Health:
+		HP: 80
+	Armor:
+		none:
+	Armament:
+		Weapon: MarPanzershrek
+	AttackFrontal:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 1
+		Image: panzershrek
+	DetectCloaked:
+		Range: 2
+

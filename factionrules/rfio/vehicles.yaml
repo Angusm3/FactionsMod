@@ -1,0 +1,326 @@
+RFIOMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	-Buildable:
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		Image: mcv
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+RFIOHARV:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	-Buildable:
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Harvester:
+		Resources: Tiberium, BlueTiberium
+		PipCount: 7
+		Capacity: 20
+		LoadTicksPerBale: 6
+		UnloadTicksPerBale: 12
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	AttackMove:
+	LeavesHusk:
+		HuskActor: HARV.Husk
+	-GainsExperience:
+	RenderHarvester:
+		Image: harv
+
+RFIOJEEP:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Hum-Vee
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: rfio
+		BuildLimit: 6
+	Mobile:
+		ROT: 11
+		Speed: 156
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		ROT: 10
+		Offset: -85,0,128
+	Armament:
+		Weapon: MachineGun
+		LocalOffset: 171,0,85
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: jeep
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: JEEP.Husk
+
+RFIOMARDER:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Marder
+		Description: Armored infantry transport and mobile AA\n  Strong vs Vehicles\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: rfio
+		BuildLimit: 2
+	Mobile:
+		ROT: 8
+		Speed: 128
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 10
+	Armament@PRIMARY:
+		Weapon: MachineGun
+		Recoil: 16
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: marder
+	WithTurret:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	LeavesHusk:
+		HuskActor: APC.Husk
+
+RFIOLEOPARD:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Med. Tank
+		Description: General-Purpose Rufio Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: rfio
+		BuildLimit: 2
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 800
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 5
+		Offset: -20,0,-150
+	Armament@1:
+		Weapon: LeoCannon
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: leopard
+		Scale: 0.6
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+RFIOFHTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Heavy Tank
+		Description: Heavy Duty Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: rfio
+		BuildLimit: 2
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 4
+	Armament:
+		Weapon: 105mmdual
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: fhtnk
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FHTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+	JamsMissiles:
+		Range: 2
+
+RFIOHTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Mammoth Tank
+		Description: Heavily armored Tank.\n  Strong vs Everything
+	Buildable:
+		BuildPaletteOrder: 50
+		Owner: rfio
+		BuildLimit: 1
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry, husk
+		Speed: 56
+		ROT: 3
+	Health:
+		HP: 1200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 120mmDual
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: MammothMissiles
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		Recoil: 42
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: htnk
+	WithTurret:
+	AutoTarget:
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	LeavesHusk:
+		HuskActor: HTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 34,34,0,-3
+
+RFIOMLRS:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: MLRS
+		Description: Long range rocket artillery.\n  Strong vs all ground units.
+	Buildable:
+		BuildPaletteOrder: 60
+		Owner: rfio
+		BuildLimit: 2
+	Mobile:
+		Speed: 85
+		ROT: 4
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+	Turreted:
+		ROT: 255
+		Offset: -256,0,128
+	Armament@PRIMARY:
+		Weapon: 227mm
+		LocalOffset: 213,128,0, 213,-128,0
+	Armament@SECONDARY:
+		Weapon: 227mm
+		LocalOffset: 213,-128,0, 213,128,0
+	AttackFrontal:
+	RenderUnit:
+		Image: msam
+	WithTurret:
+		AimSequence: aim
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MSAM.Husk
+

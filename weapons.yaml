@@ -1,0 +1,1160 @@
+Colt45:
+	ROF: 5
+	Range: 7c0
+	Report: itanatta.aud,itanattb.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+			Concrete: 0%
+		Explosion: piff
+		InfDeath: 2
+		Damage: 50
+P90:
+	ROF: 8
+	Range: 7c0
+	Report: iseaatta.aud,iseaattb.aud
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 100
+Sniper:
+	Report: RAMGUN2.AUD
+	ROF: 15
+	Range: 10c0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Damage: 150
+		Spread: 256
+		Versus:
+			None: 100%
+			Wood: 5%
+			Light: 100%
+			Heavy: 20%
+		InfDeath: 2
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+MiniTeslaZap:
+	ROF: 5
+	Charges: true
+	Range: 4c512
+	Report: itesatta.aud,itesat2a.aud,itesat2b.aud
+	Projectile: TeslaZap
+	Warhead:
+		Spread: 42
+		InfDeath: 4
+		Damage: 40
+		Versus:
+			Wood: 60%
+LightTesla:
+	ROF: 30
+	Charges: true
+	Range: 4c512
+	Report: itesatta.aud,itesat2a.aud,itesat2b.aud
+	Projectile: TeslaZap
+	Warhead:
+		Spread: 42
+		InfDeath: 2
+		Damage: 40
+		Versus:
+			Wood: 60%
+MedTesla:
+	ROF: 40
+	Charges: true
+	Range: 4c512
+	Report: itesatta.aud,itesat2a.aud,itesat2b.aud
+	Projectile: TeslaZap
+	Warhead:
+		Spread: 42
+		InfDeath: 2
+		Damage: 70
+		Versus:
+			Wood: 60%
+HeavyTesla:
+	ROF: 50
+	Charges: true
+	Range: 4c512
+	Report: itesatta.aud,itesat2a.aud,itesat2b.aud
+	Projectile: TeslaZap
+	Warhead:
+		Spread: 42
+		InfDeath: 4
+		Damage: 100
+		Versus:
+			Wood: 60%
+LaserSniper:
+	ROF: 20
+	Range: 10c0
+	Charges: true
+	Report: RAMGUN2.AUD
+	Projectile: LaserZap
+		BeamWidth: 1
+		HitAnim: laserfire
+	Warhead:
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 50%
+			Light: 20%
+			Heavy: 10%
+		InfDeath: 5
+		SmudgeType: Scorch
+		Damage: 100
+
+Scout:
+	Report: SV98.WAV
+	ROF: 100
+	Range: 10c0
+	Projectile: Bullet
+		Speed: 1c682
+		ContrailLength: 32
+	Warhead:
+		Damage: 100
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+		InfDeath: 1
+		Explosion: piff
+
+Scout2:
+	Report: SV98.WAV
+	ROF: 40
+	Range: 12c0
+	Projectile: Bullet
+		Speed: 1c682
+		ContrailLength: 32
+	Warhead:
+		Damage: 200
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 50%
+			Heavy: 0%
+		InfDeath: 2
+		Explosion: piff
+
+ATSniper:
+	ROF: 100
+	Range: 9c0
+	Report: Deagle.wav
+	ValidTargets: Ground
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 42
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 1c170
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 25%
+			Light: 100%
+			Heavy: 20%
+			Concrete: 25%
+			Mech: 150%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 80
+
+ScoutCampaign:
+	Report: GUN18.AUD
+	ROF: 100
+	Range: 10c0
+	Burst: 4
+	Projectile: Bullet
+		Speed: 1c682
+		ContrailLength: 32
+	Warhead:
+		Damage: 100
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+		InfDeath: 2
+		Explosion: small_frag
+
+SKS:
+	Report: SKS.WAV
+	ROF: 10
+	Range: 5c0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Damage: 10
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 20%
+			Light: 20%
+			Heavy: 20%
+		InfDeath: 2
+		Explosion: piff
+
+PRifle:
+	Report: prifle.wav
+	ROF: 10
+	Burst: 3
+	Range: 5c0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Damage: 40
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 30%
+			Light: 50%
+			Heavy: 30%
+		InfDeath: 3
+		Explosion: small_frag
+		SmudgeType: Crater
+
+TSARifle:
+	ROF: 20
+	Range: 4c0
+	Report: MGUN2.AUD
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 25%
+			Light: 30%
+			Heavy: 10%
+		Explosion: piff
+		InfDeath: 2
+		Damage: 15
+
+TSARocket:
+	ROF: 50
+	Range: 6c0
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 597
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 30
+
+TSABurstRifle:
+	Report: SV98.WAV
+	ROF: 100
+	Range: 10c0
+	Burst: 3
+	Projectile: Bullet
+		Speed: 1c682
+		ContrailLength: 32
+	Warhead:
+		Damage: 100
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+		InfDeath: 1
+		Explosion: piff
+
+OsirisMissiles:
+	ROF: 150
+	Range: 4c0
+	Burst: 6
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 597
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 8
+
+OsirisMissiles2:
+	ROF: 100
+	Range: 4c0
+	Burst: 4
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 597
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 8
+
+MarMG:
+	ROF: 10
+	Burst: 3
+	Range: 5c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 50%
+			Heavy: 10%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 10
+
+MarFlamethrower:
+	ROF: 25
+	Range: 2c0
+	Report: FLAMER2.AUD
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 341
+		Versus:
+			None: 90%
+			Wood: 100%
+			Light: 75%
+			Heavy: 25%
+		InfDeath: 5
+		ImpactSound: flamer2
+		SmudgeType: Scorch
+		Damage: 35
+
+MarPanzershrek:
+	ROF: 50
+	Range: 6c0
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 597
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 30
+
+QuadCannon:
+	ROF: 5
+	Burst: 4
+	Range: 5c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 50%
+			Light: 50%
+			Heavy: 30%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 10
+
+LeoCannon:
+	ROF: 60
+	Range: 7c0
+	Report: TNKFIRE6.AUD
+	Projectile: Bullet
+		Image: DRAGON
+		Speed: 1c0
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 30%
+			Wood: 75%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 50%
+		InfDeath: 4
+		Explosion: med_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 120
+
+ChurchillCannon:
+	ROF: 30
+	Range: 7c0
+	Report: TNKFIRE6.AUD
+	Projectile: Bullet
+		Image: DRAGON
+		Speed: 1c0
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 30%
+			Wood: 75%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 50%
+		InfDeath: 4
+		Explosion: med_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 60
+
+Repair:
+	ROF: 60
+	Range: 4c0
+	Report: FIXIT1.AUD
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 213
+		Versus:
+			None: 0%
+			Wood: 0%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 0%
+		InfDeath: 1
+		Damage: -20
+
+Heal:
+	ROF: 80
+	Range: 4c0
+	Report: HEAL2.AUD
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 213
+		Versus:
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+			Concrete: 0%
+		InfDeath: 1
+		Damage: -50
+
+Deagle:
+	ROF: 5
+	Range: 4c0
+	Report: Deagle.wav
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 10%
+			Heavy: 0%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piff
+		Damage: 20
+
+Glauncher:
+	ROF: 50
+	Range: 6c0
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Arm: 0
+		High: yes
+		Shadow: no
+		Proximity: yes
+		Inaccuracy: 0
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		Speed: 512
+		RangeLimit: 30
+	Warhead:
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 80
+
+Flamer:
+	ROF: 50
+	Range: 5c0
+	Burst: 15
+	BurstDelay: 1
+	Projectile: Bullet
+		Speed: 170
+		Trail: fb4
+		Image: fb3
+		Angle: 62
+		Inaccuracy: 853
+	Warhead:
+		Spread: 341
+		Versus:
+			None: 90%
+			Wood: 100%
+			Light: 60%
+			Heavy: 25%
+			Concrete: 50%
+		Explosion: small_napalm
+		WaterExplosion: small_napalm
+		InfDeath: 5
+		SmudgeType: Scorch
+		ImpactSound: firebl3.aud
+		Damage: 8
+
+105mmdual:
+	ROF: 50
+	Range: 4c768
+	Report: TNKFIRE4.AUD
+	Burst: 2
+	BurstDelay: 4
+	Projectile: Bullet
+		Image: 120MM
+		Speed: 682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 30%
+			Wood: 75%
+			Light: 75%
+			Heavy: 100%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 30
+
+120mm:
+	ROF: 50
+	Range: 6c0
+	Report: TNKFIRE6.AUD
+	Projectile: Bullet
+		Image: DRAGON
+		Speed: 1c0
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 30%
+			Wood: 75%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 50%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 40
+
+MammothRockets:
+	ROF: 15
+	Range: 10c0
+	Report: MISSILE6
+	Burst: 10
+	BurstFire: 0
+	ValidTargets: Ground
+	Projectile: Missile
+		Speed: 256
+		Arm: 2
+		High: true
+		Shadow: false
+		Proximity: true
+		ContrailLength: 10
+		Inaccuracy: 2c85
+		Image: DRAGON
+		ROT: 10
+		RangeLimit: 40
+	Warhead:
+		Spread: 256
+		Versus:
+			None: 100%
+			Wood: 75%
+			Light: 60%
+			Heavy: 33%
+			Concrete: 10%
+		Explosion: med_explosion
+		WaterExplosion: med_splash
+		InfDeath: 2
+		SmudgeType: Crater
+		Damage: 22
+
+Tiberium2:
+	ROF: 4
+	Warhead:
+		Spread: 42
+		InfDeath: 6
+		Damage: -1
+		PreventProne: yes
+	Versus:
+		None: 0%
+		Light: 0%
+		Heavy: 0%
+		Forgotten: 100%
+
+TechMachineGun:
+	ROF: 15
+	Burst: 4
+	Range: 5c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 5%
+			Light: 50%
+			Heavy: 5%
+			Concrete: 5%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 25
+
+Dozergun:
+	ROF: 15
+	Burst: 4
+	Range: 5c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 80%
+			Light: 50%
+			Heavy: 10%
+			Concrete: 50%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 20
+
+TeslaZap:
+	ROF: 3
+	Charges: true
+	Range: 8c512
+	Report: TESLA1.AUD
+	Projectile: TeslaZap
+	Warhead:
+		Spread: 42
+		InfDeath: 6
+		Damage: 100
+		Versus:
+			Wood: 60%
+Coaxial:
+	ROF: 40
+	Burst: 6
+	Range: 5c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 20
+
+Vulcan:
+	ROF: 40
+	Burst: 3
+	Range: 5c0
+	Report: infgun3.AUD
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 20%
+			Light: 20%
+			Heavy: 10%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 10
+
+NestMachineGun:
+	ROF: 80
+	Burst: 3
+	Range: 7c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 25%
+			Light: 25%
+			Heavy: 25%
+			Concrete: 10%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 25
+
+NestMachineGunAA:
+	ROF: 80
+	Burst: 3
+	Range: 7c0
+	Report: MGUN11.AUD
+	ValidTargets: Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 25%
+			Light: 100%
+			Heavy: 25%
+			Concrete: 10%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 10
+
+WolverineGun:
+	ROF: 5
+	Range: 5c0
+	Burst: 10
+	Report: WLVRGUN.WAV
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 170
+		Versus:
+			Wood: 100%
+			Light: 25%
+			Heavy: 10%
+			Concrete: 10%
+		Explosion: piffs
+		InfDeath: 5
+		Damage: 8
+
+Molotov:
+	ROF: 100
+	Range: 5c0
+	Report: toss1.aud
+	Projectile: Bullet
+		Speed: 204
+		High: yes
+		Angle: 62
+		Inaccuracy: 213
+		Image: MLTV
+	Warhead:
+		Spread: 341
+		Versus:
+			None: 90%
+			Concrete: 75%
+			Light: 75%
+			Heavy: 20%
+		InfDeath: 5
+		Explosion: med_napalm
+		ImpactSound: flamer2.aud
+		SmudgeType: Scorch
+		Damage: 50
+
+LMG:
+	ROF: 10
+	Burst: 3
+	Range: 5c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 50%
+			Heavy: 10%
+			Concrete: 0%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 10
+
+Laser:
+	ROF: 90
+	Range: 8c512
+	Charges: true
+	Report: obelray1.wav
+	Projectile: LaserZap
+		BeamWidth: 2
+		HitAnim: laserfire
+	Warhead:
+		Spread: 42
+		Versus:
+			Wood: 50%
+		InfDeath: 5
+		SmudgeType: Scorch
+		Damage: 200
+
+Laser2:
+	ROF: 120
+	Range: 8c512
+	Burst: 6
+	Charges: true
+	Report: OBELRAY1.AUD
+	Projectile: LaserZap
+		BeamWidth: 1
+		HitAnim: laserfire
+	Warhead:
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 0%
+			Light: 0%
+			Heavy: 0%
+		InfDeath: 5
+		SmudgeType: Scorch
+		Damage: 80
+
+TurretLaser:
+	ROF: 20
+	Range: 8c512
+	Burst: 1
+	Charges: true
+	Report: OBELRAY1.AUD
+	Projectile: LaserZap
+		BeamWidth: 1
+		HitAnim: laserfire
+	Warhead:
+		Spread: 42
+		Versus:
+			None: 100%
+			Wood: 50%
+			Light: 20%
+			Heavy: 10%
+		InfDeath: 5
+		SmudgeType: Scorch
+		Damage: 40
+
+125mmDual:
+	ROF: 40
+	Range: 4c768
+	Report: TNKFIRE6.AUD
+	Burst: 2
+	BurstDelay: 5
+	Projectile: Bullet
+		Image: 120MM
+		Speed: 682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 30%
+			Wood: 75%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 100%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 60
+
+MammothMissiles2:
+	ROF: 50
+	Range: 5c0
+	Report: ROCKET1.AUD
+	ValidTargets: Ground, Air
+	Burst: 4
+	Projectile: Missile
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 10
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 213
+		RangeLimit: 35
+	Warhead:
+		Spread: 256
+		Versus:
+			None: 40%
+			Wood: 75%
+			Light: 75%
+			Heavy: 50%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 75
+
+MortarShell:
+	ROF: 120
+	Range: 10c512
+	MinRange: 3c0
+	Charges: true
+	Report: TNKFIRE2.AUD
+	Projectile: Bullet
+		Speed: 204
+		High: yes
+		Angle: 110
+		Inaccuracy: 1c256
+		ContrailLength: 60
+		Image: 120MM
+	Warhead:
+		Damage: 150
+		Spread: 256
+		Versus:
+			None: 90%
+			Wood: 50%
+			Light: 60%
+			Heavy: 25%
+		InfDeath: 3
+		Explosion: poof
+		SmudgeType: Crater
+		ImpactSound: XPLOSML2.AUD
+MortarShell2:
+	ROF: 120
+	Burst: 5
+	Range: 10c512
+	MinRange: 3c0
+	Charges: true
+	Report: TNKFIRE2.AUD
+	Projectile: Bullet
+		Speed: 204
+		High: yes
+		Angle: 110
+		Inaccuracy: 1c256
+		ContrailLength: 60
+		Image: 120MM
+	Warhead:
+		Damage: 150
+		Spread: 256
+		Versus:
+			None: 90%
+			Wood: 50%
+			Light: 60%
+			Heavy: 25%
+		InfDeath: 3
+		Explosion: poof
+		SmudgeType: Crater
+		ImpactSound: XPLOSML2.AUD
+MachineGun2:
+	ROF: 15
+	Burst: 4
+	Range: 10c0
+	Report: MGUN11.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 25%
+			Light: 75%
+			Heavy: 25%
+			Concrete: 25%
+		InfDeath: 2
+		Explosion: piffs
+		Damage: 25
+
+Frockets:
+	ROF: 50
+	Range: 6c0
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 597
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 2
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 30
+
+Hrockets:
+	ROF: 100
+	Range: 6c0
+	Burst: 2
+	Report: BAZOOK1.AUD
+	ValidTargets: Ground, Air
+	Projectile: Bullet
+		Arm: 0
+		High: yes
+		Shadow: no
+		Inaccuracy: 128
+		Image: DRAGON
+		ROT: 15
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 597
+		RangeLimit: 30
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 50%
+			Wood: 85%
+			Light: 100%
+			Heavy: 100%
+			Concrete: 25%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 30
+
+227mm.stnk:
+	ROF: 70
+	Range: 9c0
+	Report: ROCKET1.AUD
+	Burst: 4
+	BurstDelay: 10
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Arm: 0
+		High: yes
+		Shadow: yes
+		Inaccuracy: 213
+		Image: DRAGON
+		ROT: 10
+		Trail: smokey
+		ContrailLength: 8
+		Speed: 213
+		RangeLimit: 55
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 35%
+			Wood: 50%
+			Light: 100%
+			Heavy: 90%
+		InfDeath: 4
+		Explosion: small_frag
+		ImpactSound: xplos.aud
+		SmudgeType: Crater
+		Damage: 60
+

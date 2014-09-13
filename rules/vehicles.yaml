@@ -1,0 +1,613 @@
+FMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq
+		Owner: forgotten
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+FHARV:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: salvage
+		Owner: forgotten
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Harvester:
+		Resources: Tiberium, BlueTiberium
+		PipCount: 7
+		Capacity: 20
+		LoadTicksPerBale: 6
+		UnloadTicksPerBale: 12
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	AttackMove:
+	LeavesHusk:
+		HuskActor: HARV.Husk
+	-GainsExperience:
+	RenderHarvester:
+
+FHTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Heavy Tank
+		Description: Heavy Duty Forgotten Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: forgotten
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 4
+	Armament:
+		Weapon: 105mmdual
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FHTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+	JamsMissiles:
+		Range: 2
+
+FTCH:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Technical
+		Description: Lightweight Scout Truck\n  Strong vs Infantry, Air\n  Weak vs Everything else
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: forgotten
+	Mobile:
+		Speed: 213
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+		Offset: -360,0,210
+	Armament:
+		Weapon: TechMachineGun
+		Recoil: 64
+		RecoilRecovery: 26
+		LocalOffset: 0,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FTCH.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+HTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Mammoth Tank
+		Description: Heavily armored GDI Tank.\n  Strong vs Everything
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: eye
+		Owner: gdi
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry, husk
+		Speed: 56
+		ROT: 3
+	Health:
+		HP: 1200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 125mmDual
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: MammothMissiles2
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		Recoil: 42
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	LeavesHusk:
+		HuskActor: HTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 34,34,0,-3
+
+MTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Med. Tank
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: gdi
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 5
+	Armament@1:
+		Weapon: 120mm
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	Armament@2:
+		Name: secondary
+		Weapon: Coaxial
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+LTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Light Tank
+		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 7
+		Speed: 113
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+	Armament@1:
+		Weapon: 70mm
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+	Armament@2:
+		Name: secondary
+		Weapon: Coaxial
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: LTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+BDZR:
+	Inherits: ^Tank
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: WarDozer
+		Description: Extremely Heavy Armour bolted in\n Fires Two Anti-Material 50. Cal Machine Guns independently\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks, Artillery
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: anyhq
+		Owner: forgotten
+	Mobile:
+		Speed: 42
+	Health:
+		HP: 1000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+	Turreted@PRIMARY:
+		Turret: primary
+		Offset: -864,0,128
+		ROT: 3
+	Turreted@SECONDARY:
+		Turret: secondary
+		Offset: 768,0,128
+		ROT: 3
+	Armament@PRIMARY:
+		Turret: primary
+		Weapon: Dozergun
+		LocalOffset: 480,-100,40, 480,100,40
+		Recoil: 171
+		RecoilRecovery: 34
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Turret: secondary
+		Weapon: Dozergun
+		LocalOffset: 480,-100,40, 480,100,40
+		Recoil: 171
+		RecoilRecovery: 34
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Scale: 1
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: BDZR.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+WLVR:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Wolverine
+		Description: Small Mech
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Owner: gdi
+	Mobile:
+		ROT: 5
+		Speed: 99
+	Health:
+		HP: 800
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	AutoTarget:
+	Armament:
+		Weapon: WolverineGun
+	RenderInfantry:
+	Selectable:
+		Voice: GenericVoice
+
+ARTY:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Artillery
+		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 3
+		Speed: 85
+	Health:
+		HP: 120
+	Armor:
+		Type: heavy
+	RevealsShroud:
+		Range: 9c0
+	Armament:
+		Weapon: ArtilleryShell
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleFlash:
+	RenderUnit:
+	Explodes:
+		Weapon: UnitExplode
+		EmptyWeapon: UnitExplode
+	AutoTarget:
+		InitialStance: Defend
+	LeavesHusk:
+		HuskActor: ARTY.Husk
+
+FTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Flame Tank
+		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings, Vehicles\n  Weak vs Aircraft
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 7
+		Speed: 113
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: Flamer
+		LocalOffset: 512,128,42, 512,-128,42
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+	AttackFrontal:
+	RenderUnit:
+	AutoTarget:
+	WithMuzzleFlash:
+		SplitFacings: true
+	Explodes:
+		Weapon: FlametankExplode
+		EmptyWeapon: FlametankExplode
+	LeavesHusk:
+		HuskActor: FTNK.Husk
+
+SPC:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Stealth Personel Carrier
+		Description: Stealth infantry transport\n  Strong vs Nothing\n  Weak vs Everything
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		ROT: 8
+		Speed: 128
+	Health:
+		HP: 150
+	Armor:
+		Type: light
+	RevealsShroud:
+		Range: 7c0
+	RenderUnit:
+	Cloak:
+		RequiresCrate: false
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 4
+	LeavesHusk:
+		HuskActor: APC.Husk
+
+STNK:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Stealth Tank
+		Description: Long-range missile tank that can cloak.\nHas weak armor. Can be spotted by infantry.\n  Strong vs Vehicles, Tanks, Aircraft\n  Weak vs Infantry.
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: tmpl
+		Owner: nod
+	Mobile:
+		ROT: 10
+		Speed: 170
+		Crushes: crate, infantry
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	Cloak:
+		RequiresCrate: false
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+	Armament:
+		Weapon: 227mm.stnk
+		LocalOffset: 213,43,128, 213,-43,128
+	AttackFrontal:
+	RenderUnit:
+	AutoTarget:
+		InitialStance: HoldFire
+	TargetableUnit:
+	LeavesHusk:
+		HuskActor: STNK.Husk
+
+JEEP:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Elite Hum-Vee
+		Description: Elite Recon Unit.\n  Strong vs Everything\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: weap
+		Owner: gdi, shyo
+	Selectable:
+		Voice: DesolatorVoice
+	Mobile:
+		ROT: 20
+		Speed: 256
+	Health:
+		HP: 700
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		ROT: 10
+		Offset: -85,0,128
+	Armament@PRIMARY:
+		Weapon: MachineGun2
+		LocalOffset: 171,0,85
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Weapon: MortarShell2
+		LocalOffset: 0,0,85
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: jeep
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: JEEP.Husk
+APCINSERT:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: APC
+		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: pyle
+		Owner: gdi
+	Mobile:
+		ROT: 8
+		Speed: 128
+	Health:
+		HP: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 2c0
+	Turreted:
+		ROT: 10
+	Armament@PRIMARY:
+		Weapon: APCGun
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: APCGun.AA
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	-Selectable:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	LeavesHusk:
+		HuskActor: APC.Husk

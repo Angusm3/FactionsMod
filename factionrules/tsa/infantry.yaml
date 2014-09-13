@@ -1,0 +1,121 @@
+TSARIFLEMAN:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Owner: tsa
+		BuildLimit: 30
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Light Infantry
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 125
+	Mobile:
+		Speed: 71
+	Armament:
+		Weapon: TSARifle
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+
+TSAROCKET:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		Owner: tsa
+		BuildLimit: 10
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Rocket Infantry
+		Description: Anti-tank infantry.\n  Strong vs Tanks\n  Weak vs Infantry
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 42
+	Armament@PRIMARY:
+		Weapon: TSARocket
+		LocalOffset: 0,0,555
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+
+TSABURSTSNIPER:
+	Inherits: ^Infantry
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Gabriel Sniper
+		Description: Elite commando infantry, armed with \na 3 shot sniper rifle
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 50
+		Owner: tsa
+		BuildLimit: 3
+	Selectable:
+		Bounds: 12,17,0,-6
+		Voice: SniperVoice
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 6c0
+	Armament:
+		Weapon: TSABurstRifle
+	CrushableInfantry:
+		CrushSound: squish2.aud
+	AttackFrontal:
+	TakeCover:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Scale: 0.7
+
+TSAMECH:
+	Inherits: ^Infantry
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 70
+		Owner: tsa
+		BuildLimit: 2
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Mechanic
+		Description: Repairs nearby vehicles.\n  Strong vs Nothing\n  Weak vs Everything
+	Selectable:
+		Bounds: 12,17,0,-9
+	Health:
+		HP: 150
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 3c0
+	Passenger:
+		PipType: Yellow
+	AutoHeal:
+	Armament:
+		Weapon: Repair
+	Captures:
+		CaptureTypes: husk
+		Sabotage: false
+	AttackMedic:
+	TakeCover:
+	-AutoTarget:
+	AttackMove:
+	RenderInfantryProne:
+		IdleAnimations: idle1,idle2
+		Image: mech
+		Scale: 0.7
+

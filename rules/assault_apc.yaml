@@ -1,0 +1,191 @@
+# {1,1,1} {1,1,2} {1,1,3} {1,2,2} {1,2,3} {1,3,3} {2,2,2} {2,2,3} {2,3,3} {3,3,3}
+APC:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: APC
+		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: pyle
+		Owner: gdi
+	Mobile:
+		ROT: 8
+		Speed: 9
+	Health:
+		HP: 350
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7
+	Turreted:
+		ROT: 10
+	Armament@PRIMARY:
+		Weapon: APCGun.AA
+		Recoil: 96
+		RecoilRecovery: 96
+		LocalOffset: 85,85,299, 85,-85,299
+	AttackTurreted:
+	WithMuzzleFlash@PRIMARY:
+	WithMuzzleFlash@SECONDARY:
+		Armament: secondary
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 3
+		PipCount: 3
+		UnloadFacing: 220
+	LeavesHusk:
+		HuskActor: APC.Husk
+		
+	TransformOnPassenger@e1:
+		PassengerTypes: e1
+		OnEnter: apc.e1
+		OnExit: apc
+
+		
+APC.E1:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+APC.E3:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+APC.E1E3:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+APC.E3E3:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+APC.E3E1:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+APC.E1E1:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+				
+APC.E1E1E1:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+	
+APC.E1E1E3:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+	
+APC.E1E3E3:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:
+	
+	
+APC.E3E3E3:
+	Inherits: APC
+	Tooltip:
+		Name: APC (1 minigunner)
+	AutoTarget:
+	RenderUnit:
+		Image: APC
+	-Buildable:
+	Armament@2:
+		Name: 2
+		Weapon: M16
+		LocalOffset: 384,0,88
+	AttackTurreted:

@@ -1,0 +1,490 @@
+Selectable: True
+
+MapFormat: 6
+
+RequiresMod: factions
+
+Title: TSA Beachhead 2
+
+Description: The invasion of The Seven Archangels
+
+Author: Angusm3
+
+Tileset: WINTER
+
+MapSize: 96,48
+
+Bounds: 8,1,80,45
+
+UseAsShellmap: False
+
+Type: Skirmish
+
+Options:
+	Crates: False
+	Fog: False
+	Shroud: True
+	AllyBuildRadius: False
+	FragileAlliances: False
+	StartingCash: 0
+	ConfigurableStartingUnits: False
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Race: gdi
+		Enemies: Nod,GDI
+	PlayerReference@Marzeron:
+		Name: Marzeron
+		Playable: True
+		Required: True
+		LockRace: True
+		Race: mar
+		LockColor: True
+		ColorRamp: 0,0,0
+		LockSpawn: True
+		LockTeam: True
+		Allies: Marzeron,Baition
+		Enemies: TSA
+	PlayerReference@Baition:
+		Name: Baition
+		Playable: True
+		Required: True
+		LockRace: True
+		Race: bait
+		LockColor: True
+		ColorRamp: 50,50,50
+		LockSpawn: True
+		LockTeam: True
+		Allies: Baition,Marzeron
+		Enemies: TSA
+	PlayerReference@TSA:
+		Name: TSA
+		Playable: True
+		Required: True
+		LockRace: True
+		Race: tsa
+		LockColor: True
+		ColorRamp: 255,100,100
+		LockSpawn: True
+		LockTeam: True
+		Allies: TSA
+		Enemies: bait,mar
+	PlayerReference@Civillians:
+		Name: Civillians
+		NonCombatant: True
+		Race: gdi
+		Enemies: Nod
+
+Actors:
+	lcfentry1: waypoint
+		Location: 76,45
+		Owner: Neutral
+	lcfentry2: waypoint
+		Location: 79,45
+		Owner: Neutral
+	lcfentry3: waypoint
+		Location: 82,45
+		Owner: Neutral
+	lcfdropoff1: waypoint
+		Location: 76,31
+		Owner: Neutral
+	lcfdropoff2: waypoint
+		Location: 79,31
+		Owner: Neutral
+	lcfdropoff3: waypoint
+		Location: 82,31
+		Owner: Neutral
+	BaitRally1: waypoint
+		Location: 72,23
+		Owner: Baition
+	BaitRally2: waypoint
+		Location: 72,19
+		Owner: Baition
+	BaitRally3: waypoint
+		Location: 72,15
+		Owner: Baition
+	MarInsert: waypoint
+		Location: 87,10
+		Owner: Neutral
+	MarRally1: waypoint
+		Location: 62,12
+		Owner: Neutral
+	MarRally2: waypoint
+		Location: 62,5
+		Owner: Neutral
+	Actor0: tc02
+		Location: 39,6
+		Owner: Neutral
+	Actor1: tc05
+		Location: 44,5
+		Owner: Neutral
+	Actor2: tc05
+		Location: 41,4
+		Owner: Neutral
+	Actor3: tc03
+		Location: 41,7
+		Owner: Neutral
+	Actor4: tc02
+		Location: 48,10
+		Owner: Neutral
+	Actor5: v01
+		Location: 43,7
+		Owner: Neutral
+	Actor6: tc02
+		Location: 42,23
+		Owner: Neutral
+	Actor7: tc02
+		Location: 37,23
+		Owner: Neutral
+	Actor8: t16
+		Location: 39,22
+		Owner: Neutral
+	Actor9: t16
+		Location: 40,23
+		Owner: Neutral
+	Actor10: tc05
+		Location: 47,22
+		Owner: Neutral
+	Actor11: tc05
+		Location: 55,24
+		Owner: Neutral
+	Actor38: tc02
+		Location: 78,15
+		Owner: Neutral
+	Actor13: tc05
+		Location: 56,13
+		Owner: Neutral
+	Actor12: tc05
+		Location: 57,22
+		Owner: Neutral
+	Actor15: tc05
+		Location: 56,2
+		Owner: Neutral
+	Actor16: tc05
+		Location: 72,3
+		Owner: Neutral
+	Actor17: tc04
+		Location: 80,18
+		Owner: Neutral
+	Actor18: tc05
+		Location: 79,13
+		Owner: Neutral
+	Actor19: tc05
+		Location: 78,3
+		Owner: Neutral
+	Actor20: tc03
+		Location: 86,21
+		Owner: Neutral
+	Actor21: tc04
+		Location: 65,14
+		Owner: Neutral
+	Actor22: tc04
+		Location: 54,20
+		Owner: Neutral
+	Actor23: tc04
+		Location: 53,11
+		Owner: Neutral
+	Actor24: tc04
+		Location: 49,1
+		Owner: Neutral
+	Actor25: tc03
+		Location: 75,5
+		Owner: Neutral
+	Actor26: tc03
+		Location: 70,5
+		Owner: Neutral
+	Actor27: tc03
+		Location: 70,2
+		Owner: Neutral
+	Actor28: tc01
+		Location: 56,11
+		Owner: Neutral
+	Actor29: tc01
+		Location: 56,4
+		Owner: Neutral
+	Actor30: tc03
+		Location: 54,4
+		Owner: Neutral
+	Actor31: tc02
+		Location: 74,12
+		Owner: Neutral
+	Actor32: tc01
+		Location: 68,4
+		Owner: Neutral
+	Actor33: tc01
+		Location: 81,16
+		Owner: Neutral
+	Actor34: tc01
+		Location: 84,20
+		Owner: Neutral
+	Actor36: v11
+		Location: 55,15
+		Owner: Neutral
+	Actor35: tc04
+		Location: 67,12
+		Owner: Neutral
+	Actor37: v09
+		Location: 53,16
+		Owner: Neutral
+	Actor14: tc04
+		Location: 60,15
+		Owner: Neutral
+	Actor39: tc03
+		Location: 75,14
+		Owner: Neutral
+	Actor40: tc03
+		Location: 70,11
+		Owner: Neutral
+	Actor41: tc01
+		Location: 72,11
+		Owner: Neutral
+	Actor42: tc01
+		Location: 63,15
+		Owner: Neutral
+	Actor44: t07
+		Location: 58,15
+		Owner: Neutral
+	Actor43: t08
+		Location: 59,15
+		Owner: Neutral
+	Actor45: t02
+		Location: 82,20
+		Owner: Neutral
+	Actor46: t07
+		Location: 83,20
+		Owner: Neutral
+	Actor47: tc05
+		Location: 83,21
+		Owner: Neutral
+	Actor48: t16
+		Location: 79,17
+		Owner: Neutral
+	Actor49: t11
+		Location: 76,15
+		Owner: Neutral
+	Actor50: e1
+		Location: 54,9
+		Owner: TSA
+	Actor51: e1
+		Location: 55,8
+		Owner: TSA
+	Actor52: e1
+		Location: 55,7
+		Owner: TSA
+	Actor53: e1
+		Location: 55,19
+		Owner: TSA
+	Actor54: e1
+		Location: 54,18
+		Owner: TSA
+	Actor55: e1
+		Location: 56,17
+		Owner: TSA
+	Actor56: miss
+		Location: 39,9
+		Owner: TSA
+	Actor57: obli
+		Location: 34,9
+		Owner: TSA
+	Actor58: nuke
+		Location: 9,3
+		Owner: TSA
+	Actor59: nuke
+		Location: 12,3
+		Owner: TSA
+	Actor60: nuke
+		Location: 15,3
+		Owner: TSA
+	Actor61: nuke
+		Location: 18,3
+		Owner: TSA
+	Actor62: nuke
+		Location: 9,6
+		Owner: TSA
+	Actor63: nuke
+		Location: 12,6
+		Owner: TSA
+	Actor64: nuke
+		Location: 15,6
+		Owner: TSA
+	Actor65: nuke
+		Location: 18,6
+		Owner: TSA
+	Actor66: pyle
+		Location: 12,10
+		Owner: TSA
+	Actor67: weap
+		Location: 12,15
+		Owner: TSA
+	Actor68: fix
+		Location: 35,18
+		Owner: TSA
+	Actor69: sam
+		Location: 38,17
+		Owner: TSA
+	Actor70: sam
+		Location: 35,6
+		Owner: TSA
+	Actor71: gtwr
+		Location: 35,14
+		Owner: TSA
+	Actor72: gtwr
+		Location: 36,9
+		Owner: TSA
+	Actor73: cycl
+		Location: 38,11
+		Owner: TSA
+	Actor74: cycl
+		Location: 39,11
+		Owner: TSA
+	Actor75: cycl
+		Location: 40,11
+		Owner: TSA
+	Actor76: cycl
+		Location: 41,11
+		Owner: TSA
+	Actor77: cycl
+		Location: 42,11
+		Owner: TSA
+	Actor78: cycl
+		Location: 42,10
+		Owner: TSA
+	Actor79: cycl
+		Location: 42,9
+		Owner: TSA
+	Actor80: cycl
+		Location: 40,12
+		Owner: TSA
+	Actor81: cycl
+		Location: 40,13
+		Owner: TSA
+	Actor82: cycl
+		Location: 40,14
+		Owner: TSA
+	Actor83: cycl
+		Location: 49,16
+		Owner: TSA
+	Actor84: cycl
+		Location: 48,16
+		Owner: TSA
+	Actor85: cycl
+		Location: 47,16
+		Owner: TSA
+	Actor86: cycl
+		Location: 46,16
+		Owner: TSA
+	Actor87: cycl
+		Location: 45,16
+		Owner: TSA
+	Actor88: cycl
+		Location: 44,16
+		Owner: TSA
+	Actor89: cycl
+		Location: 43,16
+		Owner: TSA
+	Actor90: cycl
+		Location: 42,16
+		Owner: TSA
+	Actor91: hq
+		Location: 18,10
+		Owner: TSA
+	Actor92: v11
+		Location: 23,10
+		Owner: TSA
+	Actor95: v03
+		Location: 28,6
+		Owner: TSA
+	Actor98: v14
+		Location: 26,9
+		Owner: TSA
+	Actor93: v02
+		Location: 32,7
+		Owner: TSA
+	Actor94: v14
+		Location: 25,10
+		Owner: TSA
+	Actor97: v14
+		Location: 25,9
+		Owner: TSA
+	Actor96: v14
+		Location: 26,10
+		Owner: TSA
+	Actor99: v08
+		Location: 25,7
+		Owner: TSA
+	Actor100: v04
+		Location: 26,6
+		Owner: TSA
+	Actor101: v06
+		Location: 25,11
+		Owner: TSA
+	Actor102: v07
+		Location: 29,8
+		Owner: TSA
+	Actor103: v05
+		Location: 23,12
+		Owner: TSA
+	TSAentry1: waypoint
+		Location: 8,21
+		Owner: TSA
+	TSARally1: waypoint
+		Location: 14,21
+		Owner: TSA
+	TSAEntry2: waypoint
+		Location: 8,14
+		Owner: Neutral
+	TSARally2: waypoint
+		Location: 29,11
+		Owner: Neutral
+	TSARally3: waypoint
+		Location: 29,16
+		Owner: Neutral
+	HeliExtract: waypoint
+		Location: 5,18
+		Owner: Neutral
+
+Smudges:
+
+Rules:
+	World:
+		-SpawnMPUnits:
+		-MPStartLocations:
+		-CrateSpawner:
+		LuaScriptInterface:
+			LuaScripts: beachhead.lua
+	Player:
+		-ConquestVictoryConditions:
+	^Infantry:
+		MustBeDestroyed:
+	^Vehicle:
+		MustBeDestroyed:
+	^Tank:
+		MustBeDestroyed:
+	^CivInfantry:
+		Health:
+			HP: 125
+	LST:
+		-Selectable:
+		RejectsOrders:
+
+Sequences:
+	oldlst:
+		idle: lst
+			Start: 0
+			Facings: 1
+		unload: lst
+			Start: 0
+			Facings: 1
+
+VoxelSequences:
+
+Weapons:
+
+Voices:
+
+Notifications:
+
+Translations:

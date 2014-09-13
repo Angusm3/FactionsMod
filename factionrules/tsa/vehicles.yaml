@@ -1,0 +1,207 @@
+TSAMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	-Buildable:
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		Image: mcv
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+TSAHMV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Hum-Vee
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: tsa
+		BuildLimit: 6
+	Mobile:
+		ROT: 11
+		Speed: 156
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		ROT: 10
+		Offset: -85,0,128
+	Armament:
+		Weapon: MachineGun
+		LocalOffset: 171,0,85
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: jeep
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: JEEP.Husk
+
+MEDTANK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Med. Tank
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		BuildLimit: 5
+		Owner: tsa
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 5
+	Armament@1:
+		Weapon: 120mm
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	Armament@2:
+		Name: secondary
+		Weapon: Coaxial
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: medtank
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+MAMMOTH2:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Mammoth Tank 1.5
+		Description: Heavily armored GDI Tank.\n  Strong vs Everything
+	Buildable:
+		BuildPaletteOrder: 60
+		Owner: tsa
+		BuildLimit: 1
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry
+		Speed: 56
+		ROT: 3
+	Health:
+		HP: 2000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 3
+	Armament@PRIMARY:
+		Weapon: 125mmDual
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: MammothMissiles2
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		Recoil: 42
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: HTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 34,34,0,-3
+
+OSIRIS:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1
+	Tooltip:
+		Name: Osiris Mech
+		Description: Small Mech\nCan fire a missile volley\nand has an undermounted mg
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Owner: tsa
+		BuildLimit: 3
+	Mobile:
+		ROT: 5
+		Speed: 99
+	Health:
+		HP: 400
+	Armor:
+		Type: Mech
+	RevealsShroud:
+		Range: 6c0
+	AttackFrontal:
+	AutoTarget:
+	Armament@PRIMARY:
+		Weapon: MachineGun
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: OsirisMissiles
+		LocalOffset: 0,300,510
+	Armament@TERTIARY:
+		Name: tertiary
+		Weapon: OsirisMissiles2
+		LocalOffset: 0,-300,510
+	RenderInfantry:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Voice: GenericVoice
+		Bounds: 15,20,0,-9

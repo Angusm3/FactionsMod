@@ -1,0 +1,21 @@
+Unit Roles and Names
+
+Infantry:
+-Shutze: Rifleman
+-Panzershrek: Rocket Trooper
+-Sturmtruppen: Elite Infantry
+-Flammenwerfer: Flamethrowing Trooper
+-MG Team: Anti-Infantry Team
+
+Tanks:
+-Panzer: Light Tank (No SHP)
+-Panther: Medium Tank
+-Tiger: Heavy Tank
+-Leopard: Elite Heavy Tank (No SHP)
+-Panzerhaubitze: Artillery (No SHP)
+
+OPTIONAL:
+
+Defenses:
+-Anti-Air (No SHP)
+-Anti-Tank (No SHP)

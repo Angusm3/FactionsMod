@@ -1,0 +1,90 @@
+TRAN:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Chinook Transport
+		Description: Fast Infantry Transport Helicopter.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: forgotten,gdi,nod
+	Selectable:
+		Bounds: 41,41
+	Helicopter:
+		LandWhenIdle: true
+		ROT: 5
+		Speed: 140
+		InitialFacing: 0
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach
+	Health:
+		HP: 90
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	RenderUnit:
+	WithRotor@PRIMARY:
+		Offset: -597,0,171
+	WithRotor@SECONDARY:
+		Id: rotor_2
+		Offset: 597,0,85
+	WithShadow:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 10
+		PipCount: 10
+	LeavesHusk:
+		HuskActor: TRAN.Husk
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	RejectsOrders:
+	-Selectable:
+HUEY:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: UH-1 Huey
+		Description: Transport helicopter modified to a gunship. Carries Twin Missile launchers.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: anyhq
+		Owner: forgotten
+	Selectable:
+		Bounds: 30,24
+	Helicopter:
+		RearmBuildings: hpad, fhpad
+		LandWhenIdle: true
+		ROT: 5
+		Speed: 140
+		InitialFacing: 0
+		LandableTerrainTypes: Clear,Rough,Road,Ore,Beach
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+	Armament@PRIMARY:
+		Weapon: Hrockets
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+	AttackHeli:
+		FacingTolerance: 20
+	RenderUnit:
+	WithRotor:
+		Offset: 300,0,85
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	WithMuzzleFlash:
+	WithShadow:
+	LeavesHusk:
+		HuskActor: HELI.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+

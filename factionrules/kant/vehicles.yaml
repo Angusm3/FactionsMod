@@ -1,0 +1,118 @@
+KANTMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq
+		Owner: kant
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		Image: mcv
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+KANTHARV:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: salvage
+		Owner: kant
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Harvester:
+		Resources: Tiberium, BlueTiberium
+		PipCount: 7
+		Capacity: 20
+		LoadTicksPerBale: 6
+		UnloadTicksPerBale: 12
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	AttackMove:
+	LeavesHusk:
+		HuskActor: HARV.Husk
+	-GainsExperience:
+	RenderHarvester:
+		Image: harv
+
+KANTTCH:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Technical
+		Description: Lightweight Scout Truck\n  Strong vs Infantry, Air\n  Weak vs Everything else
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: kant
+	Mobile:
+		Speed: 213
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+		Offset: -360,0,210
+	Armament:
+		Weapon: TechMachineGun
+		Recoil: 64
+		RecoilRecovery: 26
+		LocalOffset: 0,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: ftch
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FTCH.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+

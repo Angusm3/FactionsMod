@@ -1,0 +1,106 @@
+HijackerVoice: 
+	Voices:
+		Select: yeah,what,needaride
+		Move: hitit,nokeysnoproblem,needaride
+		Attack: hotwired,fouronthefloor
+		Die: ramyell1
+		Build: jackmeup
+
+SniperVoice: 
+	Voices:
+		Select: isnisea,isniseb,isnisec,isnised
+		Move: isnimoa,isnimob,isnimoc,isnimod,isnimoe
+		Attack: isniata,isniatb,isniatc,isnised
+		Die: isnidia,isnidib,isnidic
+		Build: isnisea,isniseb
+TanyaVoice:
+	Voices:
+		Select: itansea,itanseb,itansec,itansed,itansee
+		Move: itanmoa,itanmob,itanmoc,itanmod,itanmoe,itanmof
+		Attack: itanatc,itanatd
+		Die: iseadib,iseadia,iseadic
+		Build: itanatb
+		Demolish: itanata
+		Burned: itandia
+		Zapped: itandia
+SealVoice:
+	Voices:
+		Select: iseaseb,iseased
+		Move: iseamoa,iseamob,iseamoc
+		Attack: iseaata,iseaatb,iseaatc
+		Die: iseadib,iseadia,iseadic
+		Build: iseasea
+		Demolish: iseasec
+		Burned: iseadia
+		Zapped: iseadib
+ShockVoice:
+	Voices:
+		Select: itessea,itessec,itessed,itessee
+		Move: itesmoa,itesmob,itesmoc,itesmod,itesmoe,itesmof
+		Attack: itesata,itesatb,itesatc,itesatd,itesate
+		Die: itesdib,itesdia,itesdic,itesdid
+		Build: itessea
+		Demolish: itessec
+		Burned: itesdia
+		Zapped: itesdib
+IvanVoice:
+	Voices:
+		Select: icrasea,icrasec,icrased,icrasee,icrasef,icraseb
+		Move: icramoa,icramob,icramoc,icramod,icramof
+		Attack: icraata,icraatb,icraatc,icraatd
+		Die: icradib,icradia
+		Build: icrasea
+		Demolish: icrasec
+		Burned: icradia
+		Zapped: icradib
+DesolatorVoice:
+	Voices:
+		Select: idessea,idesseb,idessec,idessed,idessee
+		Move: idesmoa,idesmob,idesmoc,idesmod,idesmoe
+		Attack: idesata,idesatb,idesatc,idesatd
+		Die: idesdia,idesdib
+		Build: idessea
+		Demolish: idesseb
+		Burned: idesdia
+		Zapped: idesdib
+GenericVoice: 
+	Variants:
+		tsa: .v01,.v03
+		kant: .v01,.v03
+		bait: .v01,.v03
+		hayl: .v01,.v03
+		col: .v01,.v03
+		sid: .v01,.v03
+		gsa: .v01,.v03
+		ntaa: .v01,.v03
+		rfio: .v01,.v03
+		mar: .v01, .v03
+		shyo: .v01, .v03
+		wdg: .v01, .v03
+		mlv: .v01, .v03
+		gdi: .v01,.v03
+	Voices:
+		Select: await1,ready,report1,yessir1
+		Move: ackno,affirm1,noprob,ritaway,roger,ugotit
+		Die: nuyell1,nuyell3,nuyell4,nuyell5
+	DisableVariants: Die
+
+VehicleVoice: 
+	Variants:
+		tsa: .v01,.v02
+		kant: .v01,.v02
+		bait: .v01,.v02
+		hayl: .v01,.v02
+		col: .v01,.v02
+		sid: .v01,.v02
+		gsa: .v01,.v02
+		ntaa: .v01,.v02
+		rfio: .v01,.v02
+		mar: .v01,.v02
+		shyo: .v01,.v02
+		wdg: .v01,.v02
+		mlv: .v01,.v02
+		gdi: .v00,.v02
+	Voices:
+		Select: vehic1,yessir1,report1,await1,unit1
+		Move: ackno,affirm1,movout1 

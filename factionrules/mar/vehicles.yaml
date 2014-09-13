@@ -1,0 +1,165 @@
+MARMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	-Buildable:
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		Image: mcv
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+MARTCH:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Technical
+		Description: Lightweight Scout Truck\n  Strong vs Infantry, Air\n  Weak vs Everything else
+	Buildable:
+		BuildPaletteOrder: 10
+		Owner: mar
+		BuildLimit: 6
+	Mobile:
+		Speed: 213
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+		Offset: -360,0,210
+	Armament:
+		Weapon: TechMachineGun
+		Recoil: 64
+		RecoilRecovery: 26
+		LocalOffset: 0,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: ftch
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FTCH.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+MARLTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Light Tank
+		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: mar
+		BuildLimit: 4
+	Mobile:
+		ROT: 7
+		Speed: 113
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 5
+	Armament@1:
+		Weapon: 70mm
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+	Armament@2:
+		Name: secondary
+		Weapon: Coaxial
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: ltnk
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: LTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+MARLEOPARD:
+	Inherits: ^Tank
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Med. Tank
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 30
+		Owner: mar
+		BuildLimit: 2
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 800
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 5
+	Armament@1:
+		Weapon: LeoCannon
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: leopard
+		Scale: 0.6
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+

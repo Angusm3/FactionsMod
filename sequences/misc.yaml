@@ -1,0 +1,24 @@
+litning:
+	bright:
+		Start: 0
+		Length: 4
+	dim:
+		Start: 4
+		Length: 4
+mltv:
+	idle:
+		Start: 0
+		Length: *
+fb2:
+	idle:
+		Start: 0
+		Length: *
+
+fb3:
+	idle:
+		Start: 0
+		Facings: 32
+fb4:
+	idle:
+		Start: 0
+		Length: *

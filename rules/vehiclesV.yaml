@@ -1,0 +1,329 @@
+MCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: anyhq
+		Owner: gdi,nod
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+HARV:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: proc
+		Owner: gdi,nod
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Harvester:
+		Resources: Tiberium, BlueTiberium
+		PipCount: 7
+		Capacity: 20
+		LoadTicksPerBale: 6
+		UnloadTicksPerBale: 12
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	AttackMove:
+	LeavesHusk:
+		HuskActor: HARV.Husk
+	-GainsExperience:
+	RenderHarvester:
+
+APC:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: APC
+		Description: Armored infantry transport and mobile AA\n  Strong vs Aircraft, Vehicles\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: pyle
+		Owner: gdi
+	Mobile:
+		ROT: 8
+		Speed: 128
+	Health:
+		HP: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 10
+	Armament@PRIMARY:
+		Weapon: APCGun
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: APCGun.AA
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+	LeavesHusk:
+		HuskActor: APC.Husk
+BGGY:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Nod Buggy
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: afld
+		Owner: nod
+	Mobile:
+		ROT: 12
+		Speed: 170
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 10
+		Offset: -43,0,128
+	Armament:
+		Weapon: MachineGun
+		LocalOffset: 171,0,43
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: BGGY.Husk
+
+BIKE:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Recon Bike
+		Description: Fast scout vehicle, armed with \nrockets.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: afld
+		Owner: nod
+	Mobile:
+		ROT: 12
+		Speed: 213
+		TerrainSpeeds:
+			Clear: 70
+			Rough: 35
+			Road: 100
+			Tiberium: 35
+			BlueTiberium: 35
+			Beach: 35
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: BikeRockets
+		LocalOffset: -128, -170, 170, -128, 170, 170
+		LocalYaw: 100, -100
+	AttackFrontal:
+	RenderUnit:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: BIKE.Husk
+
+JEEP:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Hum-Vee
+		Description: Fast scout & anti-infantry vehicle.\n  Strong vs Infantry, Vehicles\n  Weak vs Tanks, Aircraft
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: weap
+		Owner: gdi
+	Mobile:
+		ROT: 11
+		Speed: 156
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		ROT: 10
+		Offset: -85,0,128
+	Armament:
+		Weapon: MachineGun
+		LocalOffset: 171,0,85
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: JEEP.Husk
+
+MSAM:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: MLRS
+		Description: Long range rocket artillery.\n  Strong vs all ground units.
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: anyhq
+		Owner: gdi
+	Mobile:
+		Speed: 85
+		ROT: 4
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+	Turreted:
+		ROT: 255
+		Offset: -256,0,128
+	Armament@PRIMARY:
+		Weapon: 227mm
+		LocalOffset: 213,128,0, 213,-128,0
+	Armament@SECONDARY:
+		Weapon: 227mm
+		LocalOffset: 213,-128,0, 213,128,0
+	AttackFrontal:
+	RenderUnit:
+	WithTurret:
+		AimSequence: aim
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MSAM.Husk
+
+MLRS:
+	Inherits: ^Tank
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Mobile S.A.M.
+		Description: Powerful anti-air unit.\nCannot attack ground units.
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: anyhq
+		Owner: nod
+	Mobile:
+		Speed: 99
+		ROT: 7
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+	Turreted:
+		ROT: 8
+		Offset: -128,0,128
+		AlignWhenIdle: true
+	Armament:
+		Weapon: Patriot
+		LocalOffset: 0,-171,0, 0,171,0
+	AttackTurreted:
+	RenderUnit:
+	WithTurret:
+		AimSequence: aim
+	AutoTarget:
+		InitialStance: Defend
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	RenderRangeCircle:
+	LeavesHusk:
+		HuskActor: MLRS.Husk
+
+MHQ:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Mobile HQ
+		Description: Base of operations
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 6c0
+	RenderUnit:
+	WithIdleOverlay@SPINNER:
+		Sequence: spinner
+		Offset: -256,0,256
+	AttackMove:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+

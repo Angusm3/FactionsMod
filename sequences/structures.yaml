@@ -1,0 +1,254 @@
+slar:
+	idle:
+		Start: 0
+		Length: 1
+		Tick: 1000
+	damaged-idle:
+		Start: 0
+		Length: 1
+		Tick: 1000
+	dead:
+		Start: 0
+		Tick: 1000
+	make: slar
+		Start: 0
+		Length: *
+		Tick: 80
+	bib: bib3
+		Start: 0
+		Length: *
+	icon: slaricon
+		Start: 0
+aslr:
+	idle:
+		Start: 0
+		Length: 1
+		Tick: 1000
+	damaged-idle:
+		Start: 0
+		Length: 1
+		Tick: 1000
+	dead:
+		Start: 0
+		Tick: 1000
+	make: aslr
+		Start: 0
+		Length: *
+		Tick: 80
+	bib: bib3
+		Start: 0
+		Length: *
+	icon: aslricon
+		Start: 0
+rfnry:
+	idle:
+		Start: 0
+		Length: 6
+		Tick: 120
+	damaged-idle:
+		Start: 30
+		Length: 6
+		Tick: 120
+	dead:
+		Start: 60
+	make: rfnrymake
+		Start: 0
+		Length: *
+		Tick: 80
+	resources: proctwr
+		Start: 0
+		Length: 6
+		Offset: -32,-21
+	damaged-resources: proctwr
+		Start: 6
+		Length: 6
+		Offset: -32,-21
+	bib: bib2
+		Start: 0
+		Length: *
+	icon: rfnryicnh
+		Start: 0
+fsal:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 0
+	dead:
+		Start: 0
+	build-top: fsal2
+		Start: 0
+		Length: 8
+	damaged-build-top: fsal2
+		Start: 0
+		Length: 8
+	idle-top: fsal2
+		Start: 0
+	damaged-idle-top: fsal2
+		Start: 4
+	make: fsalmake
+		Start: 0
+		Length: *
+		Tick: 80
+	bib: bib2
+		Start: 0
+		Length: *
+	icon: fsalicon
+		Start: 0
+		
+tent:
+	idle:
+		Start: 0
+		Length: 1
+	damaged-idle:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+	make: tentmake
+		Start: 0
+		Length: *
+		Tick: 80
+	bib: bib3
+		Start: 0
+		Length: *
+	icon: tenticon
+		Start: 0
+mgnst:
+	idle:
+		Start: 0
+		Facings: 28
+	recoil:
+		Start: 29
+		Facings: 28
+	damaged-idle:
+		Start: 57
+		Facings: 8
+	damaged-recoil:
+		Start: 64
+		Facings: 8
+	make: mgnst
+		Start: 0
+		Length: 1
+		Tick: 80
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: mgnsticon
+		Start: 0
+rdst:
+	idle:
+		Start: 0
+		Length: 1
+		Tick: 100
+	damaged-idle:
+		Start: 1
+		Length: 1
+		Tick: 100
+	dead:
+		Start: 1
+	make: rdstmake
+		Start: 0
+		Length: *
+		Tick: 80
+	bib: bib3
+		Start: 0
+		Length: *
+	icon: rdsticon
+		Start: 0
+tsla:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 10
+	active:
+		Start: 1
+		Length: 9
+	damaged-active:
+		Start: 11
+		Length: 9
+	dead:
+		Start: 11
+	make: tslamake
+		Start: 0
+		Length: *
+		Tick: 80
+	icon: tslaicon
+		Start: 0
+vlcn:
+	idle:
+		Start: 0
+		Facings: 32
+	damaged-idle:
+		Start: 32
+		Facings: 32
+	make: vlcn
+		Start: 0
+		Length: 1
+		Tick: 80
+	muzzle: gunfire2
+		Start: 0
+		Length: *
+	icon: vlcnicon
+		Start: 0
+grnh:
+	idle:
+		Start: 0
+	damaged-idle:
+		Start: 1
+	active:
+		Start: 0
+		Length: 1
+	damaged-active:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+	make: grnhmake
+		Start: 0
+		Length: *
+		Tick: 60
+	bib: bib2
+		Start: 0
+		Length: *
+	icon: grnhicon
+		Start: 0
+fsam:
+	idle:
+		Start: 0
+		Facings: 16
+
+	damaged-idle:
+		Start: 16
+		Facings: 16
+	dead:
+		Start: 63
+	make: fsammake
+		Start: 0
+		Length: 12
+		Tick: 30
+	muzzle: samfire
+		Start: 0
+		Length: 18
+		Facings: 8
+	icon: fsamicon
+		Start: 0
+armory:
+	idle:
+		Start: 0
+		Length: 1
+		Tick: 100
+	damaged-idle:
+		Start: 1
+		Length: 1
+		Tick: 100
+	dead:
+		Start: 1
+	make:
+		Start: 0
+		Length: 1
+		Tick: 80
+	bib: bib3
+		Start: 0
+		Length: *
+	icon: rdsticon
+		Start: 0

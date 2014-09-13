@@ -1,0 +1,163 @@
+WDGMCV:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mobile Construction Vehicle
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	-Buildable:
+	Selectable:
+		Priority: 3
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 750
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Transforms:
+		IntoActor: fact
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformSounds: deploy1.aud
+	RenderUnit:
+		Image: mcv
+	MustBeDestroyed:
+	AttackMove:
+	BaseBuilding:
+	LeavesHusk:
+		HuskActor: MCV.Husk
+	-GainsExperience:
+	-Cloak:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
+WDGHARV:
+	Inherits: ^Tank
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\n  Unarmed
+	-Buildable:
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	Harvester:
+		Resources: Tiberium, BlueTiberium
+		PipCount: 7
+		Capacity: 20
+		LoadTicksPerBale: 6
+		UnloadTicksPerBale: 12
+		SearchFromProcRadius: 24
+		SearchFromOrderRadius: 12
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	AttackMove:
+	LeavesHusk:
+		HuskActor: HARV.Husk
+	-GainsExperience:
+	RenderHarvester:
+		Image: harv
+
+WDGTCH:
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Technical
+		Description: Lightweight Scout Truck\n  Strong vs Infantry, Air\n  Weak vs Everything else
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: wdg
+		BuildLimit: 1
+	Mobile:
+		Speed: 113
+	Health:
+		HP: 300
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		ROT: 4
+		Offset: 0,0,210
+	Armament:
+		Weapon: QuadCannon
+		LocalOffset: 0,0,0
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: quadcannon
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: FTCH.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28
+
+WDGHELI:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Apache Longbow
+		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Tanks
+	Buildable:
+		BuildPaletteOrder: 20
+		Owner: wdg
+		BuildLimit: 1
+	Selectable:
+		Bounds: 30,24
+	Helicopter:
+		RearmBuildings: hpad
+		ROT: 4
+		Speed: 186
+	Health:
+		HP: 125
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+	Armament@PRIMARY:
+		Weapon: HeliAGGun
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: HeliAAGun
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+	AttackHeli:
+		FacingTolerance: 20
+	LimitedAmmo:
+		Ammo: 10
+		PipCount: 5
+	Reloads:
+		Count: 10
+		Period: 200
+	RenderUnit:
+		Image: heli
+	WithRotor:
+		Offset: 0,0,85
+	WithMuzzleFlash:
+	WithShadow:
+	LeavesHusk:
+		HuskActor: HELI.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
