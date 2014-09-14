@@ -14,6 +14,7 @@ flags: chrome.png
 	shyo:386,160,32,16
 	wdg:386,160,32,16
 	mlv:386,160,32,16
+	trev:386,176,32,16
 	gdi: 352,16,32,16
 	
 shellmap: reticle.png

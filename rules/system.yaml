@@ -308,6 +308,10 @@ World:
 	Country@mlv:
 		Name: Malevolentia
 		Race: mlv
+	Country@trev:
+		Name: Trevaldon
+		Race: trev
+		
 		
 		
 		
@@ -374,6 +378,10 @@ World:
 		Class: none
 		Races: mlv
 		BaseActor: mlvfact
+	MPStartUnits@mcvonlytrev:
+		Class: none
+		Races: trev
+		BaseActor: trevfact
 		
 		
 	MPStartUnits@mcvonlygdi:
@@ -387,13 +395,13 @@ World:
 		
 	MPStartUnits@default:
 		Class: light
-		Races: tsa, kant, bait, hayl, col, sid, gsa, ntaa, rfio, mar, shyo, wdg, mlv, gdi
+		Races: tsa, kant, bait, hayl, col, sid, gsa, ntaa, rfio, mar, shyo, wdg, mlv, trev, gdi
 		BaseActor: mcv
 		
 		
 	MPStartUnits@heavy:
 		Class: heavy
-		Races: tsa, kant, bait, hayl, col, sid, gsa, ntaa, rfio, mar, shyo, wdg, mlv, gdi
+		Races: tsa, kant, bait, hayl, col, sid, gsa, ntaa, rfio, mar, shyo, wdg, mlv, trev, gdi
 		BaseActor: mcv
 		SupportActors: mtnk
 

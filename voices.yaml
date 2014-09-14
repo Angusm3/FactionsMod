@@ -78,6 +78,7 @@ GenericVoice:
 		shyo: .v01, .v03
 		wdg: .v01, .v03
 		mlv: .v01, .v03
+		trev: .v01, .v03
 		gdi: .v01,.v03
 	Voices:
 		Select: await1,ready,report1,yessir1
@@ -100,6 +101,7 @@ VehicleVoice:
 		shyo: .v01,.v02
 		wdg: .v01,.v02
 		mlv: .v01,.v02
+		trev: .v01,.v02
 		gdi: .v00,.v02
 	Voices:
 		Select: vehic1,yessir1,report1,await1,unit1

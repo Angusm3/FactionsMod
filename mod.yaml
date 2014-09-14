@@ -120,6 +120,9 @@ Rules:
 	mods/factions/factionrules/mlv/structures.yaml
 	mods/factions/factionrules/mlv/vehicles.yaml
 	
+	mods/factions/factionrules/trev/infantry.yaml
+	mods/factions/factionrules/trev/structures.yaml
+	mods/factions/factionrules/trev/vehicles.yaml
 	
 	
 
