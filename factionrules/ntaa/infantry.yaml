@@ -50,6 +50,8 @@ NTAASNPR1:
 		HP: 35
 	Armor:
 		Forgotten:
+	AutoTarget:
+		ScanRadius: 10
 	Armament@PRIMARY:
 		Weapon: Scout
 	AttackFrontal:
@@ -73,6 +75,8 @@ NTAASNPR2:
 	Tooltip:
 		Name: Scout (Prone)
 	-Buildable:
+	AutoTarget:
+		ScanRadius: 12
 	Mobile:
 		Speed: 28
 	Health:
@@ -176,6 +180,8 @@ NTAAMRTR:
 		Weapon: MortarShell
 		LocalOffset: 256,43,341
 		FireDelay: 5
+	AutoTarget:
+		ScanRadius: 10
 	AttackFrontal:
 	RenderInfantryProne:
 		IdleAnimations: idle1,idle2

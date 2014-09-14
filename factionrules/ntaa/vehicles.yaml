@@ -124,7 +124,7 @@ NTAAFHTNK:
 	Buildable:
 		BuildPaletteOrder: 40
 		Owner: ntaa
-		BuildLimit: 2
+		BuildLimit: 4
 	Mobile:
 		Speed: 71
 	Health:

@@ -246,8 +246,9 @@ TSARifle:
 	Report: MGUN2.AUD
 	Projectile: Bullet
 		Speed: 1c682
+		Inaccuracy: 1
 	Warhead:
-		Spread: 128
+		Spread: 64
 		Versus:
 			None: 100%
 			Wood: 25%
