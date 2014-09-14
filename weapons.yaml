@@ -1075,7 +1075,7 @@ Frockets:
 		Arm: 0
 		High: yes
 		Shadow: no
-		Inaccuracy: 128
+		Inaccuracy: 512
 		Image: DRAGON
 		ROT: 15
 		Trail: smokey
@@ -1083,7 +1083,7 @@ Frockets:
 		Speed: 597
 		RangeLimit: 30
 	Warhead:
-		Spread: 128
+		Spread: 64
 		Versus:
 			None: 50%
 			Wood: 85%
@@ -1094,7 +1094,7 @@ Frockets:
 		Explosion: small_frag
 		ImpactSound: xplos.aud
 		SmudgeType: Crater
-		Damage: 30
+		Damage: 20
 
 Hrockets:
 	ROF: 100

@@ -43,25 +43,23 @@ BAITSMAW:
 	Health:
 		HP: 45
 	Armament@1:
-		Name: 1
 		Weapon: Frockets
 		LocalOffset: 256,43,341
-		FireDelay: 5
+		FireDelay: 1
 	Armament@2:
-		Name: 2
 		Weapon: Frockets
 		LocalOffset: 256,43,341
-		FireDelay: 5
+		FireDelay: 2
 	Armament@3:
-		Name: 3
 		Weapon: Frockets
 		LocalOffset: 256,43,341
-		FireDelay: 5
+		FireDelay: 3
 	Armament@4:
-		Name: 4
 		Weapon: Frockets
 		LocalOffset: 256,43,341
-		FireDelay: 5
+		FireDelay: 4
+		
+
 	RevealsShroud:
 		Range: 6c0
 	AttackFrontal:
