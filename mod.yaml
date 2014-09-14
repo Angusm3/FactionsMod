@@ -300,6 +300,8 @@ LuaScripts:
 	mods/common/lua/production.lua
 	mods/common/lua/facing.lua
 
+	mods/factions/factionrules/trooplist.lua
+
 Missions:
 	mods/factions/missions.yaml
 
