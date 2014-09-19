@@ -149,3 +149,42 @@ SHYOBTR:
 	Selectable:
 		Bounds: 28,28
 
+SHYOMTNK:
+	Inherits: ^Tank
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Med. Tank
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		BuildPaletteOrder: 40
+		Owner: shyo
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+	Turreted:
+		ROT: 5
+	Armament@1:
+		Weapon: AI_120mm
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleFlash:
+	RenderUnit:
+		Image: mtnk
+	WithTurret:
+	AutoTarget:
+	LeavesHusk:
+		HuskActor: MTNK.Husk
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Selectable:
+		Bounds: 28,28

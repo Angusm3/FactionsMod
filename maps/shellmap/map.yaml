@@ -22,6 +22,7 @@ Type: Shellmap
 
 Options:
 
+
 Players:
 	PlayerReference@Nod:
 		Name: Nod
@@ -338,10 +339,10 @@ Actors:
 	Actor87: brik
 		Location: 31,5
 		Owner: Nod
-	Actor35: gun
+	Actor35: gtwr
 		Location: 20,11
 		Owner: Nod
-	Actor36: gun
+	Actor36: gtwr
 		Location: 16,14
 		Owner: Nod
 	Actor41: brik
@@ -353,10 +354,10 @@ Actors:
 	Actor86: brik
 		Location: 31,4
 		Owner: Nod
-	Actor96: gun
+	Actor96: gtwr
 		Location: 33,5
 		Owner: Nod
-	Actor97: gun
+	Actor97: gtwr
 		Location: 39,3
 		Owner: Nod
 	Actor98: nuke
@@ -470,10 +471,10 @@ Actors:
 	Actor130: bggy
 		Location: 10,10
 		Owner: Nod
-	Actor131: gun
+	Actor131: gtwr
 		Location: 13,16
 		Owner: Nod
-	Actor132: gun
+	Actor132: gtwr
 		Location: 12,16
 		Owner: Nod
 	Actor133: brik
@@ -545,7 +546,7 @@ Actors:
 	Actor155: cycl
 		Location: 35,23
 		Owner: Neutral
-	Actor156: gun
+	Actor156: gtwr
 		Location: 34,23
 		Owner: Nod
 	Actor157: sam
@@ -818,16 +819,16 @@ Actors:
 	Actor251: cycl
 		Location: 63,26
 		Owner: Nod
-	Actor252: gun
+	Actor252: gtwr
 		Location: 53,27
 		Owner: Nod
-	Actor253: gun
+	Actor253: gtwr
 		Location: 50,27
 		Owner: Nod
-	Actor254: gun
+	Actor254: gtwr
 		Location: 61,27
 		Owner: Nod
-	Actor255: gun
+	Actor255: gtwr
 		Location: 64,27
 		Owner: Nod
 	Actor256: v03
@@ -993,7 +994,7 @@ Rules:
 		MenuPaletteEffect:
 			Effect: Desaturated
 		PlayMusicOnMapLoad:
-			Music: map1
+			Music: ./mods/factions/audio/menumusic.AUD
 			Loop: true
 		LuaScript:
 			Scripts: shellmap.lua

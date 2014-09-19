@@ -4,7 +4,7 @@ SHYOMLTA:
 		Cost: 0
 	Tooltip:
 		Name: Militia
-		Description: Rifle soldier, \n   Carries Semi Automatic Rifle
+		Description: Rifle soldier, \n   Carries Automatic Rifle
 	Buildable:
 		BuildPaletteOrder: 10
 		Owner: shyo
@@ -18,9 +18,14 @@ SHYOMLTA:
 	Health:
 		HP: 60
 	Armor:
-		Type: Light
+		Type: None
 	Armament:
-		Weapon: M16
+		Weapon: AI_M16
+	LimitedAmmo:
+		Ammo: 5
+	Reloads:
+		Count: 5
+		Period: 500
 	AttackFrontal:
 	RenderInfantryProne:
 		IdleAnimations: idle1,idle2

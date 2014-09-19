@@ -39,7 +39,7 @@ Packages:
 	~scores2.mix
 	~transit.mix
 	./mods/factions/bits/interior.mix
-
+	./mods/factions/audio/factionsmusic.mix
 
 Rules:
 
@@ -219,7 +219,7 @@ Notifications:
 	mods/factions/notifications.yaml
 
 Music:
-	mods/cnc/music.yaml
+	mods/factions/music.yaml
 
 TileSets:
 	mods/cnc/tilesets/desert.yaml
@@ -233,7 +233,7 @@ LoadScreen: CncLoadScreen
 	Text: Loading
 
 ContentInstaller:
-	TestFiles: conquer.mix, desert.mix, sounds.mix, speech.mix, temperat.mix, tempicnh.mix, winter.mix
+	TestFiles: conquer.mix, desert.mix, sounds.mix, speech.mix, temperat.mix, tempicnh.mix, winter.mix, factionsmusic.mix
 	InstallerBackgroundWidget: INSTALL_BACKGROUND
 	InstallerMenuWidget: INSTALL_PANEL
 	FilesToCopy: CONQUER.MIX, DESERT.MIX, SCORES.MIX, SOUNDS.MIX, TEMPERAT.MIX, WINTER.MIX

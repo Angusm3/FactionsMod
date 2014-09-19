@@ -22,3 +22,7 @@ fb4:
 	idle:
 		Start: 0
 		Length: *
+mgburst:
+	idle:
+		Start: 0
+		Facings: 32
