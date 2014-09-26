@@ -38,3 +38,72 @@ AI_120mm:
 		ImpactSound: xplos.aud
 		SmudgeType: Crater
 		Damage: 200
+TeslaDriver:
+	ValidTargets: Ground, Air
+	Report: itesatta.aud,itesat2a.aud,itesat2b.aud
+	Projectile: TeslaZap
+	ROF: 5
+	Warhead@impact:
+		Damage: 1000
+		Spread: 640
+		Versus:
+			None: 90%
+			Wood: 60%
+			Light: 60%
+			Heavy: 50%
+		Explosion: 6
+		InfDeath: 5
+		ImpactSound: itesat2b.aud
+	Warhead@areanukea:
+		Damage: 200
+		SmudgeType: Scorch
+		Spread: 2c512
+		Size: 3
+		DestroyResources: true
+		Versus:
+			None: 90%
+			Wood: 60%
+			Light: 60%
+			Heavy: 50%
+		Delay: 3
+		InfDeath: 5
+		ImpactSound: itesat2a.aud
+	Warhead@areanukeb:
+		Damage: 200
+		SmudgeType: Scorch
+		Spread: 3c768
+		Size: 4
+		DestroyResources: true
+		Versus:
+			None: 90%
+			Wood: 60%
+			Light: 60%
+			Heavy: 50%
+		Delay: 6
+		InfDeath: 5
+	Warhead@areanukec:
+		Damage: 200
+		SmudgeType: Scorch
+		Spread: 5c0
+		Size: 5
+		DestroyResources: true
+		Versus:
+			None: 90%
+			Wood: 60%
+			Light: 60%
+			Heavy: 50%
+		Delay: 9
+		InfDeath: 5
+	Warhead@areanuke:
+		Damage: 200
+		SmudgeType: Scorch
+		Spread: 6c256
+		Size: 6
+		DestroyResources: true
+		Versus:
+			None: 90%
+			Wood: 60%
+			Light: 60%
+			Heavy: 50%
+		Delay: 12
+		InfDeath: 5

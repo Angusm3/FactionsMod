@@ -35,7 +35,7 @@ SHYOMCV:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 
-SHYOHARV:
+SHYOHARV:Untitled.wmv
 	Inherits: ^Tank
 	Valued:
 		Cost: 1200

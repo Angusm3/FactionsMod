@@ -994,7 +994,7 @@ Rules:
 		MenuPaletteEffect:
 			Effect: Desaturated
 		PlayMusicOnMapLoad:
-			Music: ./mods/factions/audio/menumusic.AUD
+			Music: die
 			Loop: true
 		LuaScript:
 			Scripts: shellmap.lua

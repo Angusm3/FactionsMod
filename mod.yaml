@@ -301,6 +301,7 @@ LuaScripts:
 	mods/common/lua/facing.lua
 
 	mods/factions/factionrules/trooplist.lua
+	mods/factions/factionrules/AI.lua
 
 Missions:
 	mods/factions/missions.yaml

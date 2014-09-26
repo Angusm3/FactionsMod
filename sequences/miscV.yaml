@@ -254,6 +254,13 @@ atomic:
 	down: atomicdn
 		Start: 0
 		Length: *
+tesladriver:
+	up: atomicup
+		Start: 0
+		Length: *
+	down: atomicdn
+		Start: 0
+		Length: *
 
 ionsfx:
 	idle:
