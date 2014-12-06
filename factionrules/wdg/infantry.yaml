@@ -20,7 +20,7 @@ WDGMLTA:
 	Health:
 		HP: 60
 	Armor:
-		Type: Light
+		Type: none
 	Armament:
 		Weapon: M16
 	AttackFrontal:

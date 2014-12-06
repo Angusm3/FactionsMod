@@ -16,7 +16,7 @@ NTAAMLTA:
 	RevealsShroud:
 		Range: 6c0
 	Health:
-		HP: 50
+		HP: 60
 	Armor:
 		none:
 	Armament:

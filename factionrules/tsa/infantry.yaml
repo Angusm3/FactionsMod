@@ -18,6 +18,8 @@ TSARIFLEMAN:
 		Speed: 71
 	Armament:
 		Weapon: TSARifle
+	Armor:
+		Type: light
 	AttackFrontal:
 	TakeCover:
 	RenderInfantryProne:

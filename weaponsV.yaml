@@ -594,10 +594,10 @@ Flamer:
 	Warhead:
 		Spread: 341
 		Versus:
-			None: 90%
+			None: 100%
 			Wood: 100%
-			Light: 60%
-			Heavy: 25%
+			Light: 200%
+			Heavy: 150%
 			Concrete: 50%
 		Explosion: small_napalm
 		WaterExplosion: small_napalm
@@ -1378,7 +1378,22 @@ M16:
 		Explosion: piff
 		InfDeath: 2
 		Damage: 15
-
+M16V2:
+	ROF: 15
+	Range: 4c512
+	Report: MGUN2.AUD
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead:
+		Spread: 128
+		Versus:
+			None: 100%
+			Wood: 25%
+			Light: 30%
+			Heavy: 10%
+		Explosion: piff
+		InfDeath: 2
+		Damage: 15
 Rockets:
 	ROF: 50
 	Range: 6c0

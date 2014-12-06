@@ -16,7 +16,7 @@ MARRIFLE:
 	RevealsShroud:
 		Range: 6c0
 	Health:
-		HP: 50
+		HP: 70
 	Armor:
 		none:
 	Armament:
